@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%}Administration{%endblock%}</title>
+</head>
+<body>
+    
+
+    {%block content%}
+
+        <!-- <h1>Hola admin, vamos bien :3</h1>
+        <br> -->
+
+        <div class="content">
+
+            <div class="Contenedor-AgregarProducto">
+
+                <div class="DatosProducto-AgregarProducto">
+
+                    <form action="" method="post" id="Form-AgregarProducto" enctype="multipart/form-data">
+
+                        <div class="FormFlex-AgregarProducto">
+
+                            <label for=""  class="Label-AgregarProducto">Nombre Producto</label>
+                            <input type="text" name="NombreProducto" id="NombreProducto-AgregarProducto" class="input-AgregarProducto">
+                            <span id="NombreNoValido-AgregarProducto" style="margin-bottom: 10px;"></span>
+
+                            <label for="" class="Label-AgregarProducto">Precio del Producto</label>
+                            <input type="text" name="PrecioProducto" onkeypress="IsNumber(event);" maxlength="6" id="InputPrecio-AgregarProducto" class="input-AgregarProducto">
+                            <span id="PrecioNoValido-AgregarProducto" style="margin-bottom: 10px;"></span>
+
+                            <label for="" class="Label-AgregarProducto">Cantidad de Productos</label>
+                            <input type="text" name="CantidadProducto" onkeypress="IsNumber(event);" maxlength="2" id="InputCantidad-AgregarProducto" class="input-AgregarProducto">
+                            <span id="CantidadNoValida-AgregarProducto"></span>
+
+                            <div class="ImagenFlex-AgregarProducto">
+                                <label for="archivo" class="LabelImagen-AgregarProducto">Imagen del Producto</label>
+                                
+                                <div id="textoImagen"></div>
+                                <input type="text" style="display: none;" name="textoImagenF" id="ImagenTexto-AgregarProducto">
+                            </div>
+                            <span id="ImagenNoValida-AgregarProducto"></span>
+
+                            
+                            <input type="file" accept="image/jpeg" name="archivo" class="archivo-AgregarProducto" id="archivo">
+                            
+                            <button type="button" id="Boton-AgregarProducto">Agregar Productos</button>
+                            <!-- <input type="submit" value="Agregar Producto"> -->
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    {%endblock%}
+
+</body>
+</html>

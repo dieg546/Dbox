@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+    <title>{%block title%}Pagina de inicio{%endblock%}</title>
+</head>
+<body>
+    
+    {%block content%}
+ 
+        <div class="content">  
+
+            <div class="relative-indexmain">
+                <div class="absoluto-indexmain">
+                    {{Total}}
+                </div>
+            </div>
+            
+
+            <!-- <p></p> -->
+            <!-- <h1>{{g.user_logged['id']}}  {{data}}</h1> -->
+
+            <div class="presentacion">
+                <h2 class="titulomain">¡ Bienvenido a D<span class="letraB">B</span>ox <span class="letraB">{{g.user_logged['user']}}</span> !</h2>
+            </div>  
+            
+
+            <div class="container-opciones">
+
+                <div class="cabecera-opciones">
+                    <h2>¿Que deseas hacer?</h2>
+                </div>
+                
+
+                <div class="opciones">
+
+                    <div class="cajita">
+                        <a href="{{url_for('DBox.buscar')}}">
+
+                            <div class="opcion">
+                                <div class="elementoA">
+                                    <h2>Búsqueda</h2>
+    
+                                    <p>
+                                        Aquí puedes buscar tus productos de tecnologia
+                                        que DBox te puede ofrecer.
+                                    </p>
+                                </div>
+                                <div class="elementoB">
+                                    <img src="/static/imagenes/imagenesMain/pngegg.png" alt="" width="200" height="200">
+                                </div>
+                            </div>
+    
+                        </a>
+                    </div>
+                    
+                    <div class="cajita">
+                        <a href="{{url_for('DBox.carrito')}}">
+                            <div class="opcion">
+    
+                                <div class="elementoA">
+                                    <h2>Carrito</h2>
+    
+                                    <p>
+                                        ¿Quieres ver que tienes guardado ahora? <br>
+                                        ¡Esta opción es para ti!
+                                    </p>
+                                </div>
+                                <div class="elementoB">
+                                    <img src="/static/imagenes/imagenesMain/recomendar2.png" alt="" width="200" height="200">
+                                </div>
+    
+                            </div>
+                        </a>
+                    </div>
+
+                    
+
+                    <!-- <div class="opcion">
+                        <a href="{{url_for('DBox.buscar')}}">Buscar Productos</a> 
+                    </div>
+    
+                    <div class="opcion">
+                        <a href="#">Recomendar Productos</a>
+                    </div> -->
+
+                </div>
+
+            </div>
+
+            
+        </div>
+        
+        
+    {%endblock%}
+
+    <script src="{{url_for('static',filename='js/FlaskJS.js')}}"></script>
+
+</body>
+</html>

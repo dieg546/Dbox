@@ -1,0 +1,1306 @@
+*{
+
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Outfit', sans-serif;
+    /* font-family: 'Public Sans', sans-serif; */
+
+}
+
+body{
+ 
+    background-color: #ececec !important; 
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.cabeceraP{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 74px;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.titulino{
+
+    margin-left: unset;
+}
+
+.titulino a:hover{
+
+    text-decoration: none;
+    color: white;
+
+}
+
+.titulobase{
+
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 30px;
+    color: white;
+    text-align: left;
+    
+}
+
+.elementobase{
+
+    display: flex;
+    flex-direction: row;
+    margin-right: 30px;
+    
+}
+
+.enlaceBase{
+
+    text-decoration: none;
+    color: white;
+    margin-left: 35px;
+
+}
+
+
+.enlaceBase:hover{
+
+    color: #3c98fc;
+
+}
+
+.TheBase{
+
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    margin-top: auto;
+
+}
+
+.content{
+
+    width: 80%;
+    min-height: 1200px;
+    margin: auto;
+}
+
+.presentacionInicio{
+
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 500px;
+    margin-top: 130px;
+    margin-left: 11%;
+    
+}
+
+.login-registro{
+
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 400px;
+    margin-top: 40px;
+    margin-left: 20px;
+    padding: 15px;
+    align-items: center;
+}
+
+
+.separador{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    height: auto;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.line{
+
+    height: 1px;
+    flex: 1;
+    background-color: rgb(87, 85, 85);
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+
+.login-registro h1{
+
+    font-weight: bold;
+
+}
+
+.enlace{
+
+    width: 70%;
+    height: 60px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    line-height: 60px;
+    text-align: center;
+
+}
+
+.texto{
+
+    display: flex;
+    flex-direction: column;
+    border: unset;
+    background-color:unset;
+    height: auto;
+    margin-top: -20px;
+
+}
+
+.texto img{
+
+    margin: 0px;
+
+}
+
+/* ----------------------PLANTILLA REGISTRO------------------------- */
+
+.plantillaform{
+
+    width: 40%;
+    margin-top: 70px;
+    padding: 30px;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px black;
+    margin-left: 29%;
+
+}
+
+.registro-register{
+
+
+    height: 550px;
+
+}
+
+h1{
+
+    display: block;
+    margin-bottom: 20px !important;
+    text-align: center;
+
+}
+
+.flexform{
+
+    display: flex;
+    flex-direction: row;
+    margin-top: 56px;
+    width: 100%;
+}
+
+.datoflex{
+
+    position: relative;
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+}
+
+.apellido{
+
+    margin-left: 94px;
+
+}
+
+.flexubi{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+
+}
+
+#nombre,#apellido,
+#user,#password{
+
+    width: 200px;
+    padding: 5px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+#ubicacion{
+
+    width: 100%;
+    padding: 5px;
+    border: none;
+    background: none;
+    outline: none;
+
+}
+
+.datoflex label{
+
+    position: absolute;
+    top: 0%;
+    left: 5px;
+    color: rgb(168, 165, 165);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+
+}
+
+.datoflex input:focus ~ label,
+.datoflex input:valid ~ label{
+
+    top: -50%;
+    color: #0145F9;
+    font-size: 13px;
+
+}
+
+.Enlace-registro-login{
+
+    margin-top: 20px;
+    font-size: 16px;
+    
+
+}
+
+.botonlogin{
+
+    display: block;
+    margin-top: 30px;
+    width: 100%;
+    height: 65px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0145F9;
+    color: white;
+    transition: all .3s;
+    
+}
+
+.botonlogin:hover{
+
+    box-shadow: 0px 0px 10px blue;
+
+}
+
+
+.presentacion{
+
+    text-align: center;
+    margin-top: 35px;
+    width: 100%;
+
+}
+
+.titulomain{
+
+    font-weight: bold;
+
+}
+
+.letraB{
+
+    color: #007bff;
+
+}
+
+.container-opciones{
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    height: auto;
+    margin-top: 100px;
+    margin-left: 13%;
+
+}
+
+.cabecera-opciones{
+
+    display: flex;
+    margin-left: 4px;
+
+}
+
+.cabecera-opciones h2{
+
+    /* font-family: 'Outfit', sans-serif; */
+    font-size: 26px;
+    font-weight: 200;
+
+}
+
+.opciones{
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.cajita{
+
+    margin-right: 20px;
+
+}
+
+.cajita a:hover{
+
+    text-decoration: none;
+
+}
+
+.opcion{
+
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    height: 200px;
+    margin-top: 10px;
+    background-color: white;
+    /* margin-right: 20px; */
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px black;
+    transition: all 300ms;
+
+}
+
+.opcion:hover{
+
+    box-shadow: 0px 0px 5px #007bff;
+    /* text-decoration: none; */
+
+}
+
+.elementoA{
+
+    padding: 30px;
+
+}
+
+.elementoA h2{
+
+    color: black;
+    font-weight: 300;
+
+}
+
+.elementoB{
+
+    margin-right: 0px;
+
+}
+
+.result{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+
+.login-login{
+
+    flex-direction: column;
+
+}
+
+.nombre-login{
+
+    margin-top: 30px;
+
+}
+
+.apellido-login{
+
+    margin-top: 60px;
+
+}
+
+.boton-login{
+
+    margin-top: 50px;
+    width: 200px;
+    margin-left: 170px;
+
+}
+
+
+/* -------------------------indexmain.html-------------------------- */
+
+
+.relative-indexmain{
+
+    position: relative;
+    top: 10%;
+    right: -105%;
+    margin: 0px;
+    height: 50px;
+    width: 50px;
+}
+
+.absoluto-indexmain{
+
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    color: white;
+    border-radius: 100px;
+    line-height: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #007bff;
+    top: -124%;
+    /* left: 1537%; */
+
+}
+
+
+/* ----------------------buscador.html------------------------ */
+
+.tituloBuscador{
+
+    /* margin-top: 20px; */
+
+}
+
+.Form-buscador{
+
+    margin-top: 60px;
+
+}
+
+#buscador{
+
+
+    width: 40%;
+    height: 40px;
+    border-radius: 6px;
+    padding: 20px;
+    margin-left: 440px;
+
+}
+
+.botonBuscador{
+
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 100px;
+    background-color: none;
+    transition: all 300ms;
+}
+
+.botonBuscador:hover{
+
+
+    background-color: grey;
+    color: white;
+
+}
+
+.BusquedaErronea-buscador{
+
+    margin-left: 530px;
+
+}
+
+.BusquedaErronea-buscador h5{
+
+    color: #000000;
+
+}
+
+.BuscadorProductos{
+
+    margin-top: 20px;
+    margin-left: 3%;
+}
+
+.Busqueda{
+
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 30%;
+    height: 450px;
+    margin-top: 29px;
+    padding: 20px;
+    margin-right: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    box-shadow: 0px 0px 2px #007bff;
+    transition: all 300ms;
+}
+
+.Busqueda:hover{
+
+    box-shadow: 0px 0px 6px #007bff;
+
+}
+
+.Busqueda img{
+
+    /* margin-bottom: 10px; */
+    height: 200px;
+}
+
+.enlaceProducto{
+
+    /* display: block; */
+    text-decoration: none;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 50px;
+    overflow-y:hidden;
+    text-overflow:ellipsis;
+    font-weight: bold;
+
+}
+
+.text{
+
+    /* white-space: pre; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.enlaceProducto:hover{
+
+    text-decoration: none;
+    color: orangered;
+
+}
+
+.precio{
+
+    font-size: 35px;
+    text-decoration: none;
+    color: black;
+}
+
+.precio:hover{
+
+    text-decoration: none;
+    color: black;
+
+}
+
+.Stock-buscador{
+
+    color: green;
+
+}
+
+.boton-buscador{
+
+    width: 150px;
+    height: 50px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, .4);
+}
+
+.containerbusqueda{
+
+    width: 20%;
+    height: 200px;
+    background-color: white;
+
+}
+
+
+
+/* -------------------carrito.html--------------------- */
+
+
+.containerProductos{
+
+    width: 1200px;
+
+}
+
+.CarritoDbox{
+
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+
+}
+
+.carritoTitulo{
+
+    /* margin-top: 20px; */
+
+}
+
+.precioTotal{
+
+    position: relative;
+    width: auto;
+    height: 21px;
+    margin-bottom: 10px;
+}
+
+.posicionPrecio{
+
+    position: absolute;
+    font-size: 20px;
+    top: 10%;
+    right: 8%;
+}
+
+.containerCarrito{
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 220px;
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    align-items: center;
+    /* margin-left: 110px; */
+    border-radius: 6px;
+    box-shadow: 0px 0px 2px black;
+    margin-left: 20px;
+}
+
+.especificacionesCarrito{
+
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-left: 60px;
+    width: 60%;
+    
+}
+
+.especificacionesCarrito h5{
+
+    margin-bottom: 10px;
+
+}
+
+.carrito-producto{
+
+    /* height: 50px !important; */
+    overflow-y:hidden;
+    text-overflow:ellipsis;
+
+}
+
+.span-carrito{
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+#ActualizarForm{
+
+    float:right;
+    margin-left: 10px;
+}
+
+
+.CantidadDisponible{
+
+    margin-bottom: 0px;
+    font-size: 14px;
+    color: green;
+    /* float: right; */
+    line-height: 29px;
+    margin-left: 22px;
+}
+
+.botonesCompra{
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+
+}
+
+.botonesCompra a{
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 138px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    line-height: 35px;
+
+}
+
+.botonesCompra a:hover{
+
+    text-decoration: none;
+    color: white;
+
+}
+
+
+.botonesCompra input[type="submit"]{
+
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+
+}
+
+
+.containerRelative{
+
+    position: relative;
+    width: 500px;
+    height: auto;
+
+}
+
+.carritoCompra{
+
+    position: sticky;
+    background-color: white;
+    width: 75%;
+    height: 200px;
+    top: 185px;
+    left: 72%;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .8);
+
+}
+
+
+
+
+/* --------------------producto.html---------------------- */
+
+
+.cajaProducto{
+
+    display: flex;
+    flex-direction: row;
+    /* margin-top: 45px; */
+    background-color: white;
+    padding: 20px;
+    width: 90%;
+    height: 450px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, .4);  
+    align-items: center;
+    justify-content: center;
+}
+
+.cajaProducto img{
+
+    margin-left: 100px;
+
+}
+
+
+.relative{
+
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.infoProducto{
+
+    display: flex;
+    flex-direction: column;
+    width: 50%; 
+    /* height: 350px; */
+    padding: 10px;
+    border-radius: 5px;
+    /* border:1px solid grey; */
+    left: 47%;
+    margin-top: -30px;
+    margin-left: 150px;
+    align-self: center;
+    
+
+}
+
+.precioProducto{
+
+    font-size: 25px;
+
+}
+
+.botonesProductos{
+
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    flex: 1;
+
+}
+
+.ProductoBoton{
+
+    width: 150px;
+    height: 50px;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 50px;
+    margin-right: 10px;
+}   
+
+.añadir{
+
+    background-color: orangered;
+    border: none;
+
+}
+
+.ProductoBoton:hover{
+
+    text-decoration: none;
+    color: white;
+    box-shadow: 0px 0px 5px black;
+
+}
+
+.Stock{
+
+    float: initial;
+
+}
+
+.CarritoVacioFlex{
+
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 420px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.CarritoVacio-carrito{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: static;
+    width: 50%;
+    height: 300px;
+    /* background-color: red; */
+
+}
+
+
+/* ------------------------------Pago.html------------------------------------- */
+
+.enlace-Pago{
+    display: block;
+    font-size: 18px;
+    margin-top: 50px;
+    width: 140px;
+}
+
+.container-productos-pago{
+
+    width: 100%;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
+    /* margin-top: 50px; */
+    height: 700px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    /* overflow-y: scroll; */
+}
+
+.Visualizar-Productos{
+
+    /* overflow-y: scroll; */
+    height: 660px;
+    width: 50%;
+    /* background-color: #ccc; */
+}
+
+.Container-relative-Pago{
+
+    position: relative;
+    width: auto;
+    height: 150px;
+    /* background-color: #007bff; */
+
+}
+
+.Container-absolute-Pago{
+
+    position: absolute;
+    left: 19%;
+    bottom: -6%;
+}
+
+.Total-Compra-Pago{
+
+    font-size: 35px;
+    font-weight: 500;
+
+}
+
+.overflow-pago{
+
+    width: 70%;
+    height: 400px;
+    overflow-y: scroll;
+    margin-left: 140px;
+    margin-top: 20px;
+}
+
+.overflow-pago::-webkit-scrollbar{
+
+    width: 15px;
+
+}
+
+.overflow-pago::-webkit-scrollbar-thumb{
+
+    background-color: #babac0;
+    border-radius: 16px;
+    border: 4px solid #fff;
+
+}
+
+.Container-Pago{
+
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    align-items: center;
+    
+}
+
+.Container-Datos-Producto{
+
+    display: flex;
+    flex-direction: column;
+    width: 64%;
+    margin-left: 20px;
+}
+.Container-Datos-Producto p{
+
+    margin-bottom: 2px;
+
+}
+
+.Nombre-Producto-Pago{
+
+    font-size: 15px;
+    font-weight: bold;
+
+}
+
+.Cantidad-selecta-pago{
+
+    font-size: 15px;
+
+}
+
+.Container-Datos-Precio{
+
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    margin-right: 10px;
+    align-items: end;
+
+}
+
+.Container-Datos-Precio p{
+
+    margin-bottom: 2px;
+
+}
+
+.Precio-Mayor-Pago{
+
+    opacity: .5;
+    margin-bottom: 2px;
+}
+
+
+.productos-carrito{
+
+    width: 50%;
+    height: 1000px;
+    /* background-color: red; */
+    
+}
+
+.proceso-pago{
+
+    width: 50%;
+    height: 1000px;
+    padding: 50px;
+    margin-top: 50px;
+    /* background-color: #ccc; */
+
+}
+
+.form-pago{
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* background-color: red; */
+    align-items: center;
+}
+
+.container-datos{
+
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 50px;
+}
+
+.input-txt{
+
+    /* width: 50%; */
+    height: 35px;
+    border-radius: 6px;
+    padding: 10px;
+    /* width: 80%; */
+    border: 1px solid #ccc;
+    /* outline: none; */
+    transition: all 300ms;
+}
+
+.tarjetita{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+
+.info-tarjeta{
+
+    border-radius: 6px 6px 0px 0px;
+    width: 100%;
+
+}
+
+.fecha-tarjeta{
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.tarjeta{
+
+    width: 100%;
+
+}
+
+.t-fecha{
+    border-radius: 0px 0px 0px 6px;
+}
+
+.t-codigo{
+    border-radius: 0px 0px 6px 0px;
+}
+
+.input-txt:focus{
+
+    outline-color: #007bff;
+
+}
+
+.container-checkbox-Pago{
+
+    margin-bottom: 30px;
+
+}
+
+input[type="checkbox"]{
+
+    width: 15px;
+    height: 15px;
+
+}
+
+#Boton-Compra{
+
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #0145F9;
+    color: white;
+    border: none;
+    transition: all 300ms;
+
+}
+
+#Boton-Compra:hover{
+
+    box-shadow: 0px 0px 6px blue;
+
+}
+
+#Boton-Compra:active{
+
+    box-shadow: 0px 0px 15px blue;
+    border: none;
+    outline: none;
+
+}
+
+/* #Boton-Compra:end{
+
+
+
+} */
+
+
+/* -----------------------------------AgregarProducto.html------------------------------------- */
+
+
+
+.Contenedor-AgregarProducto{
+
+    width: 100%;
+    display: flex;
+    height: 850px;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.DatosProducto-AgregarProducto{
+
+    width: 40%;
+    height: 500px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, .8);
+    padding: 30px;
+}
+
+.FormFlex-AgregarProducto{
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Label-AgregarProducto{
+
+    color: #007bff;
+
+}
+
+.FormFlex-AgregarProducto input[type="text"]{
+
+    margin-bottom: 15px;
+    border-radius: 6px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    /* border-color: red; */
+    /* background: grey; */
+    /* outline: none; */
+    /* border: none; */
+}
+
+.input-AgregarProducto:focus{
+
+    /* border: 2px solid #007bff; */
+    outline-color: #007bff;
+    /* border-color: #007bff; */
+
+}
+
+input[type="file"]{
+
+    display: none;
+
+}
+
+.LabelImagen-AgregarProducto{
+
+    padding: 10px;
+    width: 170px;
+    height: 40px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px 0px 0px 5px;
+    cursor: pointer;
+}
+
+/* .LabelImagen-AgregarProducto:h */
+
+.ImagenFlex-AgregarProducto{
+
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+#textoImagen{
+
+    width: 378px;
+    height: 40px;
+    background-color: rgb(184, 179, 179);
+    line-height: 25px;
+    padding: 10px;
+    color: white;
+    margin-top: 10px;
+    border-radius: 0px 5px 5px 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+
+

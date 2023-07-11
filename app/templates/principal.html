@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}"> 
+    <title>{%block title%}Bienvenida{%endblock%}</title>
+</head>
+<body>
+    
+
+    {%block content%}
+
+
+        <div class="content">
+
+            
+
+            <div class="presentacionInicio">
+
+                <div class="login-registro">
+
+                    <h1>Busca y compra produtos en D<span class="letraB">B</span>ox</h1>
+
+                    
+                    <a href="{{url_for('InicioDBox.login')}}" class="enlace">Iniciar sesión</a>
+
+                    
+                    <div class="separador">
+
+                        <div class="line"></div>
+
+                        <div class="text">ó continua con</div>
+
+                        <div class="line"></div>
+
+                    </div>
+
+                    
+                    <a href="{{url_for('InicioDBox.register')}}" class="enlace registro">Registrarte</a>
+
+                </div>
+
+                <div class="login-registro texto">
+
+                    <img src="/static/imagenes/imagenesMain/BuscarFinal.png" alt="" width="400" height="300">
+
+                    Aquí en DBox podras comprar productos de técnologia y también
+                    recomendarselo a tus amigos. Es una buena manera de ayudar a encontrar 
+                    esos productos de técnologia que tanto estabas buscando.
+
+                </div>
+
+            </div>
+
+            
+        </div>
+
+        
+
+    {%endblock%}
+
+    
+
+</body>
+</html>

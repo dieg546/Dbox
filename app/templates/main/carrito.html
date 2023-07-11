@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{%block title%}Carrito de compras{%endblock%}</title>
+</head>
+<body>
+     
+    {%block content%}  
+        <!-- {% set myList=[]%} -->
+        <div class="content">
+
+            <div class="relative-indexmain">
+                <div class="absoluto-indexmain">
+                    {{Total}}
+                </div>
+            </div>
+
+            <h1 class="carritoTitulo"><strong>Carrito de compras</strong></h1>
+
+            
+
+            <!-- <div class="precioTotal">
+                <div class="posicionPrecio">
+                    <span class="letraB">Total: </span>{{Acumulado}}$
+                </div>
+            </div> -->
+            <hr>
+
+            <div class="CarritoDbox">
+
+                <div class="containerProductos">
+                
+                    {%for car in productosCarrito%}
+
+                        <!-- {%set idCarrito=car['carrito_id']%} -->
+                        
+                        {%set idProducto=car['id_producto']%}
+                        {%set nombre=car['nombre_producto']%}
+                        {%set precio=car['precio_producto']%}
+                        {%set cantidad=car['cantidad']%}
+                        {%set cantidad_selecta=car['cantidad_productos']%}
+    
+                        <div class="containerCarrito"> 
+                            {%for key, values in car.items()%}
+                        
+                                {%if loop.index==3%}
+    
+                                    <a href="{{url_for('DBox.buscar_id',id=idProducto)}}">
+                                        <img src="/static/imagenes/imagenesProductos/{{values}}.jpg" alt="" width="200" height="200">
+                                    </a>
+                                
+    
+                                {%endif%} 
+                                    
+                                {%if loop.last%}
+    
+                                    <div class="especificacionesCarrito">
+                                    
+                                        <h5><span class="letraB">Producto: </span><a href="{{url_for('DBox.buscar_id',id=idProducto)}}" class="enlaceProducto carrito-producto">{{nombre}}</a></h5>
+                                        <h5><span class="letraB">Precio: </span>${{precio}}</h5>
+                                        <h5><span class="letraB">Estado: </span></h5>
+                                        
+                                        <h5>
+                                            <span class="letraB span-carrito">Cantidad:
+
+                                                <form action="{{url_for('DBox.Actualizar')}}" method="post" id="ActualizarForm">
+                                                    <select name="select" class="Selector">
+                                                        {%for n in range(1,cantidad+1)%}
+    
+                                                            {%if n == cantidad_selecta%}
+                                                                <option value="{{n}}" selected>{{n}}</option>
+                                                            {%else%}   
+                                                                <option value="{{n}}">{{n}}</option>
+                                                            {%endif%}
+    
+                                                        {%endfor%}
+                                                    </select>
+                                                    <div class="carritoTask" style="display: none;">{{car['id']}}</div>
+                                                    
+                                                    <input type="text" name="lista" id="Milista" style="display: none;">
+                                                    <input type="text" name="lista_producto" id="MiProducto" style="display: none;">
+
+                                                </form>
+                                                
+                                                <p class="CantidadDisponible">Hay {{cantidad}} en stock.</p>
+                                            </span>
+                                            
+                                        </h5>
+                                    </div>
+    
+                                {%endif%}
+    
+                            {%endfor%}
+                        
+                            <div class="botonesCompra">
+    
+                                <form action="{{url_for('DBox.EliminarCarrito',id=car['id'])}}" method="post">
+                                    <input type="submit" class="danger" value="Eliminar Producto" 
+                                    onclick="return confirm('Estás seguro de eliminarlo?')">
+                                </form>
+    
+                            </div>
+    
+                        </div>
+                    
+                    {%endfor%}
+                </div>
+
+                <div class="containerRelative">
+                    <div class="carritoCompra" {%if productosCarrito==[]%} style="display: none;" {%endif%}>
+
+                        <!-- <p id="holi"></p> -->
+                        <h5>Cantidad de productos: <span id="Final">{{CantidadProductos}}</span></h5>
+                        <h5>SubTotal: ${{Acumulado}}</h5>
+                        <a href="{{url_for('DBox.Pago')}}" class="BotonCompra">Boton Compra</a>
+                        
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            {%if productosCarrito == [] %}
+    
+                <div class="CarritoVacioFlex">
+
+                    <div class="CarritoVacio-carrito">
+
+                        <img src="../../static/imagenes/imagenesMain/Carrito_Compras_vacio.png" alt="" width="350" height="350">
+
+                        <p style="font-size: 17px;">
+                            Parece que tu carrito por los momentos está vacio.
+                            prueba con <a href="{{url_for('DBox.buscar')}}" style="font-weight: bold;">buscar productos</a> y agregarlos aquí. 
+                        </p>
+
+                        
+
+                    </div>
+
+                </div>
+    
+            {%endif%}
+
+        </div>
+
+    {%endblock%}
+
+</body>
+</html>

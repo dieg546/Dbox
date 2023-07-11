@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%}Procesar Pago{%endblock%}</title>
+</head>
+<body>
+    {%block content%}
+
+        <div class="content">
+            
+            <a href="{{url_for('DBox.carrito')}}" class="enlace-Pago">Volver al Carrito.</a>
+
+            <div class="container-productos-pago">
+
+                <div class="Visualizar-Productos"> 
+
+                    <!-- <h1>Total de la compra</h1> -->
+
+                    <div class="Container-relative-Pago">
+                        
+                        <div class="Container-absolute-Pago">
+                            <p class="Precio-Mayor-Pago">Total:</p>
+                            <p class="Total-Compra-Pago">${{Acumulado}}</p>
+                            <span>Total Productos: {{CantidadProductos}}</span>
+                        </div>  
+
+                    </div>
+                    
+                    
+                    <div class="overflow-pago">
+
+                        {%for car in productosCarrito%}
+
+                            {%set nombre=car['nombre_producto']%}
+                            {%set precio=car['precio_producto']%}
+                            {%set cantidad_selecta=car['cantidad_productos']%}
+                            {%set precioCantidad=precio*cantidad_selecta%}
+
+                            <div class="Container-Pago">
+
+                                {%for key,values in car.items()%}
+
+                                    {%if loop.index==3%}
+
+                                        <img src="/static/imagenes/imagenesProductos/{{values}}.jpg" alt="" width="75" height="75">
+
+                                    {%endif%}
+
+                                    {%if loop.last%}
+
+                                        <div class="Container-Datos-Producto">
+                                        
+                                            <p class="Nombre-Producto-Pago">{{nombre}}</p>
+                                            <p class="Cantidad-selecta-pago">Cantidad: {{cantidad_selecta}}</p>
+
+                                        </div>
+
+                                        <div class="Container-Datos-Precio">
+
+                                            <p><strong>${{precioCantidad}}</strong></p>
+                                            <p class="Precio-Mayor-Pago">Cada uno: ${{precio}}</p>
+                                            
+                                        </div>
+
+                                    {%endif%}
+
+                                {%endfor%}
+
+                            </div>
+
+                        {%endfor%}
+
+                    </div>
+
+            
+                </div>
+
+                <div class="proceso-pago">
+
+                    <form action="" method="post" class="form-pago" id="Form-Pago">
+
+                        <div class="container-datos">
+
+                            <label for="">Email</label>
+                            <input type="email" class="input-txt FOCOLOCO 1" name="email-datos" id="email-dato" value="{{Data['email_transaccion']}}">
+                            <span id="email-error" style="color: red;"></span>
+                        </div>
+
+                        
+                        <div class="container-datos">
+                            <div class="tarjetita"> 
+                                <label for="">Informacion de la tarjeta</label>
+                                <div class="shadow">
+                                    <input type="text" name="tarjeta-datos" value="{{Data['numero_tarjeta']}}" id="NumeroTarjeta" class="input-txt info-tarjeta FOCOLOCO 2" placeholder="1234 1234 1234 1234" onkeypress="IsNumber(event);" maxlength="19">
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="fecha-tarjeta">
+
+                                <input type="text" placeholder="MM/YY" value="{{Data['fecha_vencimiento']}}" name="caducidad-datos" class="input-txt tarjeta t-fecha FOCOLOCO 3" id="FechaExpiracion" onkeypress="IsNumber(event);" maxlength="7">
+                                <input type="text" placeholder="CVC" value="{{Data['numero_reverso']}}" name="reverso-datos" class="input-txt tarjeta t-codigo FOCOLOCO 4" id="ReversoTarjeta" onkeypress="IsNumber(event);" maxlength="4">
+
+                            </div>
+                            <span id="tarjeta-error" style="color: red;"></span>
+                        </div>
+ 
+                        <div class="container-datos">
+
+                            <label for="">Usuario de la tarjeta.</label>
+                            <input type="text" name="usuario-datos" value="{{Data['usuario_tarjeta']}}" class="input-txt FOCOLOCO 5" id="usuarioTarjeta">
+                            <span id="usuario-error" style="color: red;"></span>
+                        </div>
+                        <div class="container-checkbox-Pago">
+
+                            <!-- {%if Data['cheack']==1%}
+                                <p>HOLI</p>
+                                <input type="checkbox" name="checked" id="checked" width="50" height="50" value="checked"> <span>¿Deseas guardar tus datos para futuras transacciones?</span>
+
+                            {%else%}
+                                <p>QUE</p>
+                                <input type="checkbox" name="checked" id="checked" width="50" height="50"> <span>¿Deseas guardar tus datos para futuras transacciones?</span>
+
+                            {%endif%} -->
+
+                            <input type="checkbox" name="checked" id="checked" width="50" height="50"
+                            {% if Data['cheack']==1 %} checked {%endif%}> <span>¿Deseas guardar tus datos para futuras transacciones?</span>
+
+
+                            <!-- <h1>HEY {{Data['cheack']}}</h1> -->
+                        </div> 
+                        
+                        <!-- <button value="Pagar" id="Boton-Compra"></button> -->
+                        <!-- <input type="button" > -->
+                        <button type="button" id="Boton-Compra">Pagar</button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="{{url_for('static',filename='js/FlaskJS.js')}}"></script>
+
+    {%endblock%}
+</body>
+</html>
