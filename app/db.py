@@ -5,14 +5,12 @@ import click
 
 from flask.cli import with_appcontext
 
-
-
 from .esquemabox import instruccions
 
 def get_datab():
 
     if 'db' not in g:
-
+        
         g.db = mysql.connector.connect(
             
             host=current_app.config['DATABASE_HOST'],  
