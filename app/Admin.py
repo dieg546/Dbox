@@ -25,7 +25,7 @@ def Agregar():
 
         CarpetaBase = os.path.dirname(__file__)
         Archivo = secure_filename(ImagenNombre.filename)  
-        print('HEEEEEEY: ',Archivo) 
+        # print('HEEEEEEY: ',Archivo) 
         Subir = os.path.join(CarpetaBase,'static/imagenes/imagenesProductos',Archivo)
         ImagenNombre.save(Subir)
 
@@ -39,10 +39,10 @@ def Agregar():
 
         # print() 
 
-        print(NombreProducto)
-        print(PrecioProducto)     
-        print(CantidadProducto) 
-        print(ImagenNombre) 
+        # print(NombreProducto)
+        # print(PrecioProducto)     
+        # print(CantidadProducto) 
+        # print(ImagenNombre) 
 
         
 
