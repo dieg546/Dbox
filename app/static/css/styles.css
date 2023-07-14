@@ -6,7 +6,7 @@
     /* font-family: 'Public Sans', sans-serif; */
 
 }
-
+ 
 body{
  
     background-color: #ececec !important; 
@@ -56,6 +56,7 @@ body{
 
     display: flex;
     flex-direction: row;
+    align-items: center;
     margin-right: 30px;
     
 }
@@ -75,6 +76,12 @@ body{
 
 }
 
+.Git{
+
+    font-size: 25px;
+
+}
+
 .TheBase{
 
     width: 100%;
@@ -87,7 +94,7 @@ body{
 .content{
 
     width: 80%;
-    min-height: 1200px;
+    min-height: 100vh;
     margin: auto;
 }
 
@@ -107,7 +114,7 @@ body{
     display: flex;
     flex-direction: column;
     width: 50%;
-    height: 400px;
+    height: 250px;
     margin-top: 40px;
     margin-left: 20px;
     padding: 15px;
@@ -164,6 +171,7 @@ body{
     background-color:unset;
     height: auto;
     margin-top: -20px;
+    height: 250px;
 
 }
 
@@ -175,16 +183,25 @@ body{
 
 /* ----------------------PLANTILLA REGISTRO------------------------- */
 
+.FlexPlantilla{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+
+}
+
 .plantillaform{
 
-    width: 40%;
+    width: 70%;
     margin-top: 70px;
     padding: 30px;
     height: 500px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 0px 8px black;
-    margin-left: 29%;
+    /* margin-left: 29%; */
 
 }
 
@@ -282,11 +299,23 @@ h1{
 
 }
 
+.FlexBoton{
+
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+
+}
+
 .botonlogin{
 
     display: block;
-    margin-top: 30px;
-    width: 100%;
+    /* margin-top: 30px; */
+    width: 250px;
     height: 65px;
     border: none;
     border-radius: 5px;
@@ -437,11 +466,10 @@ h1{
 }
 
 .boton-login{
-
-    margin-top: 50px;
+    
+    margin-top: 0px;
     width: 200px;
-    margin-left: 170px;
-
+    
 }
 
 
@@ -451,11 +479,14 @@ h1{
 .relative-indexmain{
 
     position: relative;
-    top: 10%;
-    right: -105%;
-    margin: 0px;
+    display: flex;
+    justify-content: end;
+    /* top: 10%; */
+    /* left: 101.7%; */
+    /* margin: 0px; */
     height: 50px;
-    width: 50px;
+    width: 105.5%;
+    /* background-color: #007bff; */
 }
 
 .absoluto-indexmain{

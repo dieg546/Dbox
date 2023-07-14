@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="/static/imagenes/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/MediaQuery.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400&family=Public+Sans:wght@500&display=swap" rel="stylesheet">
@@ -45,7 +46,7 @@
                 <a href="{{url_for('InicioDBox.logout')}}" class="enlaceBase" title="Cerrar sesión"><i class="fa-solid fa-arrow-right-from-bracket" style="font-size: 25px;"></i></a>
 
             {%else%}
-
+                <a href="https://github.com/dieg546/Dbox" class="enlaceBase Git"><i class="fa-brands fa-github"></i></a>
                 <a href="{{url_for('InicioDBox.register')}}" class="enlaceBase">Registro</a>
                 <a href="{{url_for('InicioDBox.login')}}" class="enlaceBase">Logeate</a>
 

@@ -1,0 +1,667 @@
+@media (max-width:1490px) {
+    
+    .relative-indexmain{
+
+        
+        width: 103.9%;
+        
+        
+    }
+
+}
+
+
+@media (max-width:1360px) {
+
+    /* .relative-indexmain{
+
+        left: 99.0%;
+
+    } */
+
+    
+
+}
+
+
+
+@media (max-width:1250px) {
+    
+
+    .relative-indexmain{
+
+        width: 102.5%;
+
+    }
+
+    .login-registro h1{
+
+        font-size: 32px;
+
+    }
+
+    .enlace{
+
+        width: 200px;
+        height: 45px;
+        line-height: 45px;
+
+    }
+
+    .login-registro img{
+
+        width: 300px;
+        height: 200px;
+
+    }
+
+    .texto{
+
+        font-size: 15px;
+
+    }
+
+
+    .plantillaform h1{
+
+        font-size: 35px;
+
+    }
+
+}
+
+@media (max-width:1100px){
+
+    .relative-indexmain{
+
+        width: 101.7%;
+
+    }
+
+}
+
+@media (max-width:1025px) {
+
+    /* .relative-indexmain{
+
+        left: 94.8%;
+
+    } */
+
+    .login-registro h1{
+
+        font-size: 28px;
+
+    }
+
+    .texto{
+
+        font-size: 13px;
+        margin-top: 20px;
+    }
+
+    .login-registro img{
+
+        width: 250px;
+        height: 150px;
+
+    }
+
+    .text{
+
+        font-size: 14px;
+
+    }
+
+    .line{
+
+        /* width: 100%; */
+
+        margin-right: 3px;
+        margin-left: 3px;
+
+    }
+
+    .plantillaform{
+
+
+        width: 70%;
+        /* margin-left: 100px; */
+
+    }
+
+    .plantillaform h1{
+
+        font-size: 30px;
+
+    }
+
+    .botonlogin{
+
+        height: 55px;
+
+    }
+
+    .boton-login{
+
+        margin-top: 0px;
+        width: 150px;       
+        
+    }
+    
+}
+
+@media (max-width:995px){
+
+    .relative-indexmain{
+
+        width: 100.4%;
+
+    }
+
+    .plantillaform{
+
+
+        width: 75%;
+        /* margin-left: 100px; */
+
+    }
+
+}
+
+@media (max-width:956px){
+
+    /* .relative-indexmain{
+
+        left: 93.5%;
+
+    } */
+
+    
+
+}
+
+@media (max-width:895px){
+
+    .relative-indexmain{
+
+        width: 99.0%;
+
+    }
+
+    .login-registro h1{
+
+        font-size: 25px;
+
+    }
+
+    .enlace{
+
+        width: 150px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 15px;
+
+    }
+
+    .text{
+
+        font-size: 12px;
+
+    }
+
+    .texto{
+
+        margin-left: 0px;
+        margin-top: 40px;
+        font-size: 11px;
+     
+    }
+
+    .login-registro img{
+
+        width: 200px;
+        height: 100px;
+
+    }
+
+    .plantillaform{
+
+
+        width: 80%;
+        /* margin-left: 100px; */
+
+    }
+
+
+}
+
+
+@media (max-width:842px){
+
+
+    .login-registro h1{
+
+        font-size: 22px;
+
+    }
+
+
+    .plantillaform{
+
+
+        width: 85%;
+        /* margin-left: 100px; */
+
+    }
+
+    .apellido{
+
+        margin-left: 2%;
+
+
+    }
+
+    .datoflex:first-child{
+
+        margin-right: 3%;
+
+    }
+
+}
+
+@media (max-width:786px){
+
+    .relative-indexmain{
+
+        width: 97.0%;
+
+    }
+
+
+}
+
+@media (max-width:700px){
+
+
+    .login-registro h1{
+
+        font-size: 20px;
+
+    }
+
+    .enlace{
+
+        width: 130px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+
+    }
+
+    .texto{
+
+        
+        font-size: 9px;
+     
+    }
+
+    .plantillaform{
+
+
+        width: 92%;
+        /* margin-left: 100px; */
+
+    }
+
+    .apellido{
+
+        margin-right: 20px;
+
+
+    }
+
+}
+
+@media (max-width:682px){
+
+
+    .relative-indexmain{
+
+        width: 95.0%;
+
+    }
+
+}
+
+@media (max-width:650px){
+
+    .login-registro h1{
+
+        font-size: 17px;
+
+    }
+
+    #nombre, #apellido,#user,#password{
+
+        width: 185px;
+
+    }
+
+    .plantillaform{
+
+        width: 92%;
+
+    }
+
+    .login{
+
+
+        width: 70%;
+        /* margin-left: 100px; */
+
+    }
+
+}
+
+@media (max-width:625px){
+
+    .relative-indexmain{
+
+        width: 93.5%;
+
+    }
+
+    .content{
+
+        height: 850px;
+
+    }
+
+    .presentacionInicio{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .login-registro{
+
+        /* background-color: red; */
+        margin-top: 0px;
+        width: 100%;
+
+    }
+
+    .login-registro h1{
+
+        font-size: 24px;
+
+    }
+
+    .enlace{
+
+        width: 250px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 12px;
+
+    }
+
+    .login-registro img{
+
+        width: 300px;
+        height: 200px;
+
+    }
+
+    .texto{
+
+        font-size: 15px;
+        height: auto;
+        margin-top: 10px;
+        margin-left: 20px;
+        /* margin-bottom: 100px; */
+        /* padding-left: 0px; */
+
+    }
+
+    .plantillaform{
+
+
+        width: 92%;
+        /* margin-left: 100px; */
+
+    }
+
+    .login{
+
+
+        width: 75%;
+        /* margin-left: 100px; */
+
+    }
+
+}
+
+@media (max-width:594px) {
+    
+    .relative-indexmain{
+
+        width: 92.0%;
+
+    }
+
+    #nombre, #apellido,#user,#password{
+
+        width: 170px;
+
+    }
+
+}
+
+@media (max-width:550px) {
+    
+
+    .relative-indexmain{
+
+        width: 91.0%;
+
+    }
+
+    #nombre, #apellido,#user,#password{
+
+        width: 155px;
+
+    }
+
+}
+
+@media (max-width:490px){
+
+    .relative-indexmain{
+
+        width: 92.0%;
+
+    }
+
+    .elementobase{
+
+        margin-right: 10px;
+
+    }
+
+    .titulobase{
+
+        margin-left: 10px;
+
+    }
+
+    .titulino a{
+
+
+        font-size: 25px;        
+
+    }
+
+    .enlaceBase {
+        /* background-color: red; */
+        font-size: 15px;
+
+    }
+
+    .login-registro h1{
+
+        font-size: 20px;
+
+    }
+
+    .login-registro img{
+
+        width: 250px;
+        height: 150px;
+
+    }
+
+    .texto{
+
+        /* font-weight: bold; */
+        letter-spacing: 1px;
+        font-size: 11px;
+     
+    }
+
+
+    .login{
+
+        width: 80%;
+
+    }
+
+    .plantillaform{
+
+
+        width: 80%;
+        height: 660px;
+        
+        /* margin-left: 100px; */
+
+    }
+
+    .plantillaform h1{
+
+        font-size: 25px;
+
+    }
+
+    .flexform{
+
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .apellido{
+
+        margin-top: 30px;
+
+    }
+
+}
+
+@media (max-width:410px){
+
+    .login-registro h1{
+
+        font-size: 18px;
+
+    }
+
+    .enlace{
+
+        width: 200px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 12px;
+
+    }
+    
+    .elementobase{
+
+        margin-right: 10px;
+
+    }
+
+    .enlaceBase{
+
+        margin-left: 20px;
+
+    }
+
+    .plantillaform{
+
+
+        width: 85%;
+        /* margin-left: 100px; */
+
+    }
+
+}
+
+@media (max-width:372px){
+
+
+    .login-registro h1{
+
+        font-size: 16px;
+
+    }
+
+    .enlaceBase{
+
+        font-size: 12px;
+
+    }
+
+    .enlace{
+
+        width: 150px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 12px;
+
+    }
+
+    .plantillaform{
+
+
+        width: 90%;
+        /* margin-left: 100px; */
+
+    }
+
+    .datoflex label{
+
+        font-size: 13px;
+
+    }
+
+}
+
+@media (max-width:338px){
+
+    .relative-indexmain{
+
+        width: 90.5%;
+
+    }
+
+    .login-registro h1{
+
+        font-size: 14px;
+
+    }
+
+
+}

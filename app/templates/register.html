@@ -25,61 +25,69 @@
                 </div>
 
             {%endfor%} 
-
-            <div class="plantillaform registro-register">
-
-                <h1>Registro</h1>
-
-                <form action="" method="post">
-
-                    <div class="flexform">
-
-                        <div class="datoflex">
-                            
-                            <input type="text" name="nombre" id="nombre" required>
-                            <label >Nombre</label>
-                        </div>
-                        
-                        <div class="datoflex apellido">
-                            
-                            <input type="text" name="apellido" id="apellido" required>
-                            <label for="">Apellido</label>
-                        </div>
-                        
-                    </div>
-
-                    <div class="flexform">
-
-                        <div class="datoflex">
-                            
-                            <input type="text" name="user" id="user" required>
-                            <label for="">Nombre de Usuario:</label>
-                        </div>
-
-                        <div class="datoflex apellido"> 
-                            
-                            <input type="password" name="password" id="password" required>
-                            <label for="">Contraseña:</label>
-                        </div>
-
-                    </div>
-
-                    <div class="datoflex flexubi">
-                        
-                        <input type="text" name="ubicacion" id="ubicacion" required>
-                        <label for="ubicacion">Ubicacion</label>
-                    </div>
-
-                    <div class="Enlace-registro-login">
-                        <span style="font-weight:bold; font-size:13px; opacity: calc(0.8);">¿Ya posees una cuenta? prueba con </span><a href="{{url_for('InicioDBox.login')}}" style="font-weight:bold; font-size:13px;">Iniciar Sesion</a>
-                    </div>
-
-                    <input type="submit" value="Registrarse" class="botonlogin">
-
-                </form>
-            </div>
             
 
+            <div class="FlexPlantilla">
+
+                <div class="plantillaform registro-register">
+
+                    <h1>Registro</h1>
+    
+                    <form action="" method="post">
+    
+                        <div class="flexform">
+    
+                            <div class="datoflex">
+                                
+                                <input type="text" name="nombre" id="nombre" required>
+                                <label >Nombre</label>
+                            </div>
+                            
+                            <div class="datoflex apellido">
+                                
+                                <input type="text" name="apellido" id="apellido" required>
+                                <label for="">Apellido</label>
+                            </div>
+                            
+                        </div>
+    
+                        <div class="flexform">
+    
+                            <div class="datoflex">
+                                
+                                <input type="text" name="user" id="user" required>
+                                <label for="">Nombre de Usuario:</label>
+                            </div>
+    
+                            <div class="datoflex apellido"> 
+                                
+                                <input type="password" name="password" id="password" required>
+                                <label for="">Contraseña:</label>
+                            </div>
+    
+                        </div>
+    
+                        <div class="datoflex flexubi">
+                            
+                            <input type="text" name="ubicacion" id="ubicacion" required>
+                            <label for="ubicacion">Ubicacion</label>
+                        </div>
+    
+                        <div class="Enlace-registro-login">
+                            <span style="font-weight:bold; font-size:13px; opacity: calc(0.8);">¿Ya posees una cuenta? prueba con </span><a href="{{url_for('InicioDBox.login')}}" style="font-weight:bold; font-size:13px;">Iniciar Sesion</a>
+                        </div>
+    
+                        <div class="FlexBoton">
+                            <input type="submit" value="Registrarse" class="botonlogin">
+                        </div>
+    
+                    </form>
+                </div>
+
+            </div>
+
+            
+            
         </div>
         
     {%endblock%}
