@@ -3,7 +3,7 @@
     .relative-indexmain{
 
         
-        width: 103.9%;
+        width: 104.9%;
         
         
     }
@@ -70,12 +70,49 @@
 
 }
 
+@media (max-width:1170px){
+
+    .container-opciones{
+
+        width: 87%;
+        margin-left: 8%;
+
+    }
+
+    .elementoA{
+
+        padding: 15px;
+        
+    }
+
+    .elementoA p{
+
+        font-size: 15px;
+        
+    }
+
+    .elementoB img{
+
+        width: 150px;
+        height: 150px;
+        margin-top: 25px;
+
+    }
+
+}
+
 @media (max-width:1100px){
 
     .relative-indexmain{
 
         width: 101.7%;
 
+    }
+
+    #buscador{
+
+        width: 100%;
+        
     }
 
 }
@@ -171,13 +208,20 @@
 
 @media (max-width:956px){
 
-    /* .relative-indexmain{
+    .container-opciones{
 
-        left: 93.5%;
+        width: 90%;
+        margin-left: 6%;
 
-    } */
 
-    
+    }
+
+    .elementoA{
+
+        padding: 8px;
+        margin-top: 10px;
+        
+    }
 
 }
 
@@ -233,11 +277,32 @@
 
     }
 
+    .Busqueda img{
+
+        width: 150px;
+        height: 150px;
+
+    }
+
+    .precio{
+
+        font-size: 28px;
+
+    }
+
 
 }
 
 
 @media (max-width:842px){
+
+
+    .container-opciones{
+
+        width: 100%;
+        margin-left:1%;
+
+    }
 
 
     .login-registro h1{
@@ -278,6 +343,48 @@
 
     }
 
+    .elementoA{
+
+        margin-top: 24px;
+
+    }
+
+    .elementoA h2{
+
+        font-size: 24px;
+
+    }
+
+    .elementoA p{
+
+        font-size: 13px;
+
+    }
+
+    .elementoB img{
+
+        height: 100px;
+        width: 100px;
+        margin-top: 40px;
+        margin-right: 10px;
+
+    }
+
+    /* #buscador{
+
+        width: 70%;
+        
+    } */
+
+}
+
+@media (max-width:750px){
+
+    .Busqueda{
+
+        width: 44%;
+
+    }
 
 }
 
@@ -321,6 +428,15 @@
 
     }
 
+    .BusquedaErronea-buscador img{
+
+
+        height: 350px;
+        width: 350px;
+
+
+    }
+
 }
 
 @media (max-width:682px){
@@ -329,6 +445,29 @@
     .relative-indexmain{
 
         width: 95.0%;
+
+    }
+
+}
+@media (max-width:686px){
+
+    .elementoA{
+
+        margin-top: 24px;
+
+    }
+
+    .elementoA h2{
+
+        font-size: 22px;
+
+    }
+
+    .elementoA p{
+
+        font-size: 11px;
+        /* font-weight: bold; */
+        letter-spacing: 1px;
 
     }
 
@@ -372,11 +511,6 @@
 
     }
 
-    .content{
-
-        height: 850px;
-
-    }
 
     .presentacionInicio{
 
@@ -443,6 +577,46 @@
 
     }
 
+    .container-opciones{
+
+        margin-left: 2%;
+
+    }
+
+    .opciones{
+
+        flex-direction: column;
+
+    }
+
+    .cajita{
+
+        width: 90%;
+        margin-bottom: 20px;
+
+    }
+
+    .elementoA{
+
+        margin-top: 24px;
+
+    }
+
+    .elementoA h2{
+
+        font-size: 24px;
+
+    }
+
+    .elementoA p{
+
+        font-size: 14px;
+        /* font-weight: bold; */
+        letter-spacing: 0px;
+
+    }
+
+
 }
 
 @media (max-width:594px) {
@@ -475,6 +649,38 @@
         width: 155px;
 
     }
+
+    .Busqueda{
+
+        height: 300px;
+
+    }
+
+    .Busqueda img{
+
+        width: 100px;
+        height: 100px;
+
+    }
+
+    .enlaceProducto{
+
+
+        font-size: 14px;
+
+    }
+
+    .precio{
+
+        font-size: 25px;
+
+    }
+
+    /* #buscador{
+
+        width: 100%;
+        
+    } */
 
 }
 
@@ -568,6 +774,67 @@
 
     }
 
+    #buscador::placeholder{
+
+        font-size: 14px;
+
+    }
+
+    .BusquedaErronea-buscador img{
+
+
+        height: 250px;
+        width: 250px;
+
+
+    }
+
+    .BusquedaErronea-buscador h5{
+
+
+        font-size: 20px;
+
+
+    }
+
+}
+
+@media (max-width:420px){
+
+
+    .Busqueda{
+
+        width: 100%;
+        
+    }
+
+    .Busqueda img{
+
+        width: 150px;
+        height: 150px;
+
+    }
+
+    .enlaceProducto{
+
+
+        font-size: 15px;
+
+    }
+
+    .precio{
+
+        font-size: 28px;
+
+    }
+
+
+    .Busqueda p{
+
+        margin-bottom: 0px;
+
+    }
+
 }
 
 @media (max-width:410px){
@@ -604,6 +871,12 @@
 
         width: 85%;
         /* margin-left: 100px; */
+
+    }
+
+    #buscador::placeholder{
+
+        font-size: 12px;
 
     }
 
@@ -647,6 +920,12 @@
 
     }
 
+    .tituloBuscador{
+
+        font-size: 33px;
+
+    }
+
 }
 
 @media (max-width:338px){
@@ -663,5 +942,11 @@
 
     }
 
+
+    .elementoA p{
+
+        font-size: 12px;
+
+    }
 
 }

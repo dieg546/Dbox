@@ -26,12 +26,12 @@
         
             <form action="" method="post" class="Form-buscador">
 
-                <label for=""></label>
+                
                 <input type="text" name="buscador" id="buscador" placeholder="Escribe el producto que deseas buscar">
 
                 <button type="submit" class="botonBuscador"><i class="fa-solid fa-magnifying-glass"></i></button>
 
-                <!-- <h5>Prueba buscando lo que quieras</h5> -->
+                
 
             </form>
 
@@ -64,7 +64,7 @@
                                 <a href="{{url_for('DBox.buscar_id',id=dict['id'])}}" class="precio">${{value}}</a>
                                 <!-- <p class="precio">{{value}}$</p> -->
                             {%elif loop.index==5%}
-                                <p><span class="Stock-buscador">Cantidad en stock:</span> {{value}}</p>
+                                <p><span class="Stock-buscador">Cantidad en stock:</span>{{value}}</p>
                             {%endif%}
                     
                         {%endfor%}

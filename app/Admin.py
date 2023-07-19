@@ -22,7 +22,7 @@ def Agregar():
         PrecioProducto = request.form['PrecioProducto']
         CantidadProducto = request.form['CantidadProducto']
         ImagenNombre = request.files['archivo']
-
+ 
         CarpetaBase = os.path.dirname(__file__)
         Archivo = secure_filename(ImagenNombre.filename)  
         # print('HEEEEEEY: ',Archivo) 
