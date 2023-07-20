@@ -60,8 +60,14 @@
                                 {%if loop.last%}
     
                                     <div class="especificacionesCarrito">
-                                    
-                                        <h5><span class="letraB">Producto: </span><a href="{{url_for('DBox.buscar_id',id=idProducto)}}" class="enlaceProducto carrito-producto">{{nombre}}</a></h5>
+                                        
+                                        <div class="Overflow-carrito">
+                                            <h5>
+                                                <span class="letraB">Producto: </span>
+                                                <a href="{{url_for('DBox.buscar_id',id=idProducto)}}" class="enlaceProducto carrito-producto">{{nombre}}</a>
+                                            </h5>
+                                        </div>
+                                        
                                         <h5><span class="letraB">Precio: </span>${{precio}}</h5>
                                         <h5><span class="letraB">Estado: </span></h5>
                                         
@@ -112,6 +118,7 @@
                 </div>
 
                 <div class="containerRelative">
+
                     <div class="carritoCompra" {%if productosCarrito==[]%} style="display: none;" {%endif%}>
 
                         <!-- <p id="holi"></p> -->

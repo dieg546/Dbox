@@ -68,6 +68,12 @@
 
     }
 
+    .carritoCompra h5{
+
+        font-size: 15px;
+
+    }
+
 }
 
 @media (max-width:1170px){
@@ -115,6 +121,30 @@
         
     }
 
+    .Flex-producto img{
+
+        width: 250px;
+        height: 250px;
+    }
+
+}
+
+@media (max-width:1071px){
+
+    .containerCarrito a img{
+
+        height: 150px;
+        width: 150px;
+
+    }
+
+    .danger{
+
+        width: 110px;
+        font-size: 12px;
+
+
+    }
 }
 
 @media (max-width:1025px) {
@@ -185,6 +215,12 @@
         width: 150px;       
         
     }
+
+    .cajaProducto{
+
+        width: 100%;
+
+    }
     
 }
 
@@ -221,6 +257,30 @@
         padding: 8px;
         margin-top: 10px;
         
+    }
+
+    .Overflow-carrito h5{
+
+        font-size: 15px;
+
+    }
+
+    .especificacionesCarrito h5{
+
+        font-size: 15px;
+
+    }
+
+    .CantidadDisponible{
+
+        font-size: 12px;
+
+    }
+
+    .carritoCompra h5{
+
+        font-size: 13px;
+
     }
 
 }
@@ -290,9 +350,82 @@
 
     }
 
+    .infoProducto h3{
+
+        font-size: 25px;
+
+    }
+
+    .precioProducto{
+
+        font-size: 21px;
+
+    }
+
+    .ProductoBoton{
+
+        width: 110px;
+        height: 45px;
+        font-size: 13px;
+
+    }
+
+    .Stock{
+
+        margin-left: 0px;
+
+    }
 
 }
 
+@media (max-width:866px){
+
+    .containerCarrito{
+
+        height: 180px;
+
+    }
+
+    .containerCarrito a img{
+
+        height: 100px;
+        width: 100px;
+
+    }
+
+    .Overflow-carrito h5{
+
+        font-size: 13px;
+
+    }
+
+    .especificacionesCarrito h5{
+
+        font-size: 13px;
+
+    }
+
+    .CantidadDisponible{
+
+        font-size: 10px;
+
+    }
+
+    .carritoCompra h5{
+
+        font-size: 11px;
+
+    }
+
+    .danger{
+
+        width: 95px;
+        font-size: 10px;
+
+
+    }
+
+}
 
 @media (max-width:842px){
 
@@ -378,11 +511,118 @@
 
 }
 
-@media (max-width:750px){
+@media (max-width:755px){
+
+    .cajaProducto{
+
+        height: 350px;
+
+    }
 
     .Busqueda{
 
         width: 44%;
+
+    }
+
+    .Flex-producto img{
+
+        width: 180px;
+        height: 180px;
+
+    }
+
+    .infoProducto h3{
+
+        font-size: 22px;
+
+
+    }
+
+    .precioProducto{
+
+        font-size: 19px;
+
+    }
+
+    .infoProducto form p{
+
+        font-size: 12px;
+
+    }
+
+    .Selector-producto{
+
+        width: 28px;
+        height: 18px;
+
+    }
+
+    .Stock{
+
+        font-size: 12px;
+
+    }
+
+    .ProductoBoton{
+
+        width: 95px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 10px;
+
+    }
+
+}
+
+@media (max-width:726px){
+
+    .CarritoDbox{
+
+        flex-direction: column;
+
+    }
+
+    .containerProductos{
+
+        width: 100%;
+
+    }
+
+    .containerCarrito{
+
+        width: 100%;
+
+    }
+
+    .containerCarrito a img{
+
+        height: 115px;
+        width: 115px;
+
+    }
+
+    .containerRelative{
+
+        width: 95%;
+
+    }
+
+    .carritoCompra{
+
+        width: 100%;
+
+    }
+
+    .CantidadDisponible{
+
+        font-size: 13px;
+
+    }
+
+    .carritoCompra h5{
+
+        font-size: 13px;
 
     }
 
@@ -633,6 +873,86 @@
 
     }
 
+    .infoProducto h3{
+
+        font-size: 20px;
+
+
+    }
+
+    .precioProducto{
+
+        font-size: 18px;
+
+    }
+
+    .infoProducto form p{
+
+        font-size: 10px;
+
+    }
+
+    .Stock{
+
+        font-size: 10px;
+
+    }
+
+    .containerCarrito a img{
+
+        height: 95px;
+        width: 95px;
+
+    }
+
+    .Overflow-carrito h5{
+
+        font-size: 12px;
+
+    }
+
+    .especificacionesCarrito h5{
+
+        font-size: 12px;
+
+    }
+
+    .CantidadDisponible{
+
+        font-size: 10px;
+
+    }
+
+}
+
+@media (max-width:535px){
+
+    .containerCarrito a img{
+
+        height: 90px;
+        width: 90px;
+
+    }
+
+    .Overflow-carrito h5{
+
+        font-size: 10px;
+
+    }
+
+    .especificacionesCarrito h5{
+
+        font-size: 10px;
+
+    }
+
+    .danger{
+
+        width: 85px;
+        font-size: 8px;
+
+    }
+
 }
 
 @media (max-width:550px) {
@@ -673,6 +993,12 @@
     .precio{
 
         font-size: 25px;
+
+    }
+
+    .ProductoBoton{
+
+        font-size: 8px;
 
     }
 
@@ -797,6 +1123,142 @@
 
     }
 
+
+    .Flex-producto img{
+
+        width: 150px;
+        height: 150px;
+
+    }
+
+    .infoProducto h3{
+
+        font-size: 18px;
+
+
+    }
+
+    .precioProducto{
+
+        font-size: 16px;
+
+    }
+
+    .containerCarrito{
+
+        flex-direction: column;
+        height: 313px;
+        align-items: center;
+
+    }
+
+    .containerCarrito a img{
+
+        height: 110px;
+        width: 110px;
+
+    }
+
+    .Overflow-carrito h5{
+
+        font-size: 14px;
+
+    }
+
+    .especificacionesCarrito{
+
+        margin-top: 10px;
+        margin-left: 0px;
+
+    }
+
+    .especificacionesCarrito h5{
+
+        font-size: 14px;
+
+    }
+
+    .danger{
+
+        width: 100px;
+        font-size: 10px;
+
+    }
+
+}
+
+@media (max-width:462px){
+
+
+    .cajaProducto{
+
+        flex-direction: column;
+        height: 450px;
+
+    }
+
+    .Flex-producto{
+
+        width: 100%;
+        height: 217px;
+        /* margin-bottom: 50px; */
+
+    }
+
+    .infoProducto{
+
+        align-items: center;
+
+    }
+
+    .infoProducto form p{
+
+        margin-left: 20px;
+        font-size: 11px;
+    }
+
+    .Selector-producto{
+
+        width: 34px;
+
+    }
+
+    .ProductoBoton{
+
+        font-size: 11px;
+
+    }
+
+}   
+
+@media (max-width:430px){
+
+    .carritoTitulo{
+
+        font-size: 28px;
+
+    }
+
+    .containerCarrito{
+
+        flex-direction: column;
+        height: 350px;
+        align-items: center;
+
+    }
+
+    .Overflow-carrito h5{
+
+        font-size: 12px;
+
+    }
+
+    .especificacionesCarrito h5{
+
+        font-size: 12px;
+
+    }
+
 }
 
 @media (max-width:420px){
@@ -818,7 +1280,7 @@
     .enlaceProducto{
 
 
-        font-size: 15px;
+        font-size: 12px;
 
     }
 
@@ -877,6 +1339,12 @@
     #buscador::placeholder{
 
         font-size: 12px;
+
+    }
+
+    .CantidadDisponible{
+
+        font-size: 8px;
 
     }
 
@@ -946,6 +1414,12 @@
     .elementoA p{
 
         font-size: 12px;
+
+    }
+
+    .containerCarrito{
+
+        height: 370px;
 
     }
 

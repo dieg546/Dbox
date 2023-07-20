@@ -58,7 +58,10 @@
                             
                             {%elif loop.index==3%}
 
-                                <a href="{{url_for('DBox.buscar_id',id=dict['id'])}}" class="enlaceProducto">{{value}}</a>
+                                <div class="enlaceProducto-buscador">
+                                    <a href="{{url_for('DBox.buscar_id',id=dict['id'])}}" class="enlaceProducto">{{value}}</a>
+                                </div>
+                                
                                 
                             {%elif loop.index==4%}
                                 <a href="{{url_for('DBox.buscar_id',id=dict['id'])}}" class="precio">${{value}}</a>

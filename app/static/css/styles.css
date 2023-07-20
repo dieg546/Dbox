@@ -587,6 +587,7 @@ h1{
     margin-top: 29px;
     padding: 20px;
     margin-right: 20px;
+    
     align-items: center;
     justify-content: center;
     border-radius: 6px;
@@ -606,6 +607,15 @@ h1{
     height: 200px;
 }
 
+.enlaceProducto-buscador{
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    
+}
+
 .enlaceProducto{
 
     /* display: block; */
@@ -614,8 +624,6 @@ h1{
     margin-top: 10px;
     margin-bottom: 10px;
     height: 50px;
-    overflow-y:hidden;
-    text-overflow:ellipsis;
     font-weight: bold;
 
 }
@@ -682,7 +690,7 @@ h1{
 
 .containerProductos{
 
-    width: 1200px;
+    width: 80%;
 
 }
 
@@ -691,6 +699,7 @@ h1{
     display: flex;
     flex-direction: row;
     margin-bottom: 50px;
+    width: 100%;
 
 }
 
@@ -729,7 +738,7 @@ h1{
     /* margin-left: 110px; */
     border-radius: 6px;
     box-shadow: 0px 0px 2px black;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 
 .especificacionesCarrito{
@@ -737,14 +746,25 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    margin-left: 60px;
+    margin-left: 25px;
     width: 60%;
+    
+}
+
+.Overflow-carrito{
+
+    width: 80%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     
 }
 
 .especificacionesCarrito h5{
 
     margin-bottom: 10px;
+    font-size: 17px;
 
 }
 
@@ -760,6 +780,7 @@ h1{
 
     display: flex;
     flex-direction: row;
+    align-items: center;
 
 }
 
@@ -777,14 +798,14 @@ h1{
     color: green;
     /* float: right; */
     line-height: 29px;
-    margin-left: 22px;
+    margin-left: 10px;
 }
 
 .botonesCompra{
 
     display: flex;
     flex-direction: column;
-    margin-left: 30px;
+    /* margin-left: 30px; */
 
 }
 
@@ -825,27 +846,32 @@ h1{
 .containerRelative{
 
     position: relative;
-    width: 500px;
+    width: 25%;
     height: auto;
-
+    align-items: center;
+    justify-content: center;
 }
 
 .carritoCompra{
 
     position: sticky;
     background-color: white;
-    width: 75%;
-    height: 200px;
+    width: 90%;
+    height: auto;
     top: 185px;
     left: 72%;
     border-radius: 6px;
     padding: 20px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, .8);
+    margin-left: 10px;
 
 }
 
+.carritoCompra h5{
 
+    font-size: 18px;
 
+}
 
 /* --------------------producto.html---------------------- */
 
@@ -865,9 +891,19 @@ h1{
     justify-content: center;
 }
 
-.cajaProducto img{
+.Flex-producto{
 
-    margin-left: 100px;
+    display: flex;
+    width: 50%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Imagen-producto:first-child{
+
+    margin-right: 20px;
 
 }
 
@@ -879,20 +915,32 @@ h1{
     height: 200px;
 }
 
+
 .infoProducto{
 
     display: flex;
     flex-direction: column;
-    width: 50%; 
-    /* height: 350px; */
+    width: 100%; 
     padding: 10px;
     border-radius: 5px;
-    /* border:1px solid grey; */
     left: 47%;
     margin-top: -30px;
-    margin-left: 150px;
     align-self: center;
-    
+    /* overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; */
+
+}
+
+.Overflow-producto{
+
+    width: 100%;
+    /* overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: initial;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; */
 
 }
 

@@ -10,14 +10,14 @@
 <body>
     {%block content%}
 
-        <div class="content">
+        <div class="content"> 
 
             <div class="relative-indexmain">
                 <div class="absoluto-indexmain">
                     {{Total}}
                 </div>
             </div>
-            <!-- <h1>Vale, este es un pequeño paso.</h1> -->
+            <!-- <h1>Vale, este es un pequeño paso.</h1> --> 
 
             {%for category,message in get_flashed_messages(with_categories=true)%}  
 
@@ -44,36 +44,47 @@
   
             <div class="cajaProducto">
 
-                <img src="/static/imagenes/imagenesProductos/{{productos['imgNombre']}}.jpg" alt="" width="350" height="350">
+                <div class="Flex-producto">
+                    <img src="/static/imagenes/imagenesProductos/{{productos['imgNombre']}}.jpg" alt="" width="350" height="350">
+                </div>
+                
+                <div class="Flex-producto">
 
+                    <div class="infoProducto">
 
-                <div class="infoProducto">
-                    <h3><strong>{{productos['producto']}}</strong></h3>
-                    
-                    <p class="precioProducto">USD {{productos['precio']}}$</p>
-                    <p>Estado: idk</p>
-
-                    <form action="{{url_for('DBox.AgregarCarrito',id=productos['id'])}}" method="post">
-
-                        <p>Cantidad disponible: 
-                            <span>
-                                <select name="selected" id="">
-                                    {%for n in range(1,productos['cantidad']+1)%}
-                                        <option value="{{n}}">{{n}}</option>
-                                    {%endfor%}
-                                </select>
-                            </span> 
-                            <span class="CantidadDisponible Stock">Hay {{productos['cantidad']}} en stock.</span>
-                        </p>
-    
-                        <div class="botonesProductos">
-                            
-                            <a href="#" class="ProductoBoton">Comprar ya</a>
-                            <button type="submit" class="ProductoBoton añadir">Añadir al carrito.</button>
-
+                        <div class="Overflow-producto">
+                            <h3><strong>{{productos['producto']}}</strong></h3>
                         </div>
+                        
+                        <p class="precioProducto">USD {{productos['precio']}}$</p>
+                        <!-- <p>Estado: idk</p> -->
+    
+                        <form action="{{url_for('DBox.AgregarCarrito',id=productos['id'])}}" method="post">
+    
+                            <p>Cantidad disponible: 
+                                <span>
+                                    <select name="selected" id="" class="Selector-producto">
+                                        {%for n in range(1,productos['cantidad']+1)%}
+                                            <option value="{{n}}">{{n}}</option>
+                                        {%endfor%}
+                                    </select>
+                                </span>
+                                
+                                <span class="CantidadDisponible Stock">{{productos['cantidad']}} en stock.</span>
+                            </p>
+        
+                            <div class="botonesProductos">
+                                
+                                <a href="#" class="ProductoBoton">Comprar ya</a>
+                                <button type="submit" class="ProductoBoton añadir">Añadir al carrito.</button>
+    
+                            </div>
+    
+                        </form>
+                    </div>
 
                 </div>
+                
                 
             </div>
 
