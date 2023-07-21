@@ -8,7 +8,7 @@
         
     }
 
-}
+} 
 
 
 @media (max-width:1360px) {
@@ -20,6 +20,14 @@
     } */
 
     
+    .overflow-pago{
+
+        background-color: aqua;
+        width: 85%;
+        margin-left: 70px;
+
+    }
+
 
 }
 
@@ -104,6 +112,13 @@
         margin-top: 25px;
 
     }
+    
+
+    .container-checkbox-Pago{
+
+        font-size: 15px;
+
+    }
 
 }
 
@@ -143,6 +158,64 @@
         width: 110px;
         font-size: 12px;
 
+
+    }
+
+    .overflow-pago{
+
+        background-color: aqua;
+        width: 85%;
+        margin-left: 57px;
+
+    }
+
+    .Container-Pago img{
+
+        width: 65px;
+        height: 65px;
+
+    }
+
+    .Nombre-Producto-Pago{
+
+        font-size: 13px;
+
+    }
+
+    .Cantidad-selecta-pago{
+
+        font-size: 12px;
+
+    }
+
+    .PrecioTotal-Pago{
+
+        font-size: 13px;
+
+    }
+
+    .Precio-Mayor-Pago{
+
+
+        font-size: 11px;
+
+    }
+
+    .container-datos label{
+
+        font-size: 14px;
+
+    }
+
+    .container-checkbox-Pago{
+
+        font-size: 12px;
+
+    }
+
+    .container-datos{
+
+        width: 89%;
 
     }
 }
@@ -280,6 +353,86 @@
     .carritoCompra h5{
 
         font-size: 13px;
+
+    }
+
+}
+
+@media (max-width:945px){
+
+    .Total-Compra-Pago{
+
+        font-size: 28px;
+        margin-bottom: 7px;
+
+    }
+
+    .Container-absolute-Pago span{
+
+        font-size: 12px;
+
+    }
+
+
+    .overflow-pago{
+
+        width: 88%;
+        margin-left: 47px;
+
+    }
+
+    .Precio-Mayor-Pago{
+
+        font-size: 10px;
+
+    }
+
+    .container-datos{
+
+        margin-bottom: 34px;
+
+    }
+
+    .Contenedor-DatosImportantes{
+
+        width: 80%;
+
+    }
+
+    .CreadoPor h3{
+
+        font-size: 22px;
+
+    }
+
+    .CreadoPor p{
+
+        font-size: 17px;
+
+    }
+
+    .TecnologiasEmpleadas h3{
+
+        font-size: 22px;
+
+    }
+
+    .Tecnologias img{
+
+        height: 40px;
+        width: 40px;
+
+    }
+
+    .RedesSociales h3{
+
+        font-size: 22px;
+
+    }
+
+    .Redes a{
+
+        font-size: 17px;
 
     }
 
@@ -466,6 +619,84 @@
 
     }
 
+    .container-productos-pago{
+
+        height: 640px;
+
+    }
+
+    .Container-relative-Pago{
+
+        height: 112px;
+
+    }
+
+    
+    .proceso-pago{
+
+        margin-top: 4px;
+
+    }
+
+    .input-txt{
+
+        font-size: 13px;
+
+    }
+
+    #Boton-Compra{
+
+        width: 190px;
+        height: 41px;
+
+    }
+
+    .container-checkbox-Pago{
+
+        font-size: 10px;
+
+    }
+
+    .overflow-pago{
+
+        width: 99%;
+        margin-left: 0px;
+
+    }
+
+    .Container-Pago img{
+
+
+        height: 55px;
+        width: 55px;
+
+    }
+
+    .Nombre-Producto-Pago{
+
+        font-size: 11px;
+
+    }
+
+    .Cantidad-selecta-pago{
+
+        font-size: 10px;
+
+    }
+
+    .PrecioTotal-Pago{
+
+        font-size: 11px;
+
+    }
+
+
+    .Precio-Mayor-Pago{
+
+        font-size: 9px;
+
+    }
+
 }
 
 @media (max-width:786px){
@@ -626,6 +857,12 @@
 
     }
 
+    .Contenedor-DatosImportantes{
+
+        width: 89%;
+
+    }
+
 }
 
 @media (max-width:700px){
@@ -708,6 +945,51 @@
         font-size: 11px;
         /* font-weight: bold; */
         letter-spacing: 1px;
+
+    }
+
+}
+
+@media (max-width:655px){
+
+    .container-productos-pago{
+
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+
+    }
+
+    .Container-absolute-Pago{
+
+        left: 1%;
+
+    }
+
+    .Container-Pago img{
+
+        height: 65px;
+        width: 65px;
+
+    }
+
+    .Visualizar-Productos{
+
+        width: 80%;
+        height: 534px;
+
+    }
+
+    .proceso-pago{
+
+        width: 79%;
+        height: 500px;
+
+    }
+
+    #email-error,#tarjeta-error,#usuario-error{
+
+        font-size: 12px;
 
     }
 
@@ -856,6 +1138,19 @@
 
     }
 
+    .Contenedor-DatosImportantes{
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .Contenedor-DatosImportantes div{
+
+        margin-bottom: 10px;
+
+    }
 
 }
 
@@ -1256,6 +1551,18 @@
     .especificacionesCarrito h5{
 
         font-size: 12px;
+
+    }
+
+    .Visualizar-Productos{
+
+        width: 100%;
+
+    }
+
+    .proceso-pago{
+
+        width: 100%;
 
     }
 

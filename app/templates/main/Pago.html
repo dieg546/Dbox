@@ -52,16 +52,19 @@
                                     {%if loop.last%}
 
                                         <div class="Container-Datos-Producto">
-                                        
-                                            <p class="Nombre-Producto-Pago">{{nombre}}</p>
+                                            
+                                            <div class="NombreProducto-Pago">
+                                                <p class="Nombre-Producto-Pago">{{nombre}}</p>
+                                            </div>
+                                            
                                             <p class="Cantidad-selecta-pago">Cantidad: {{cantidad_selecta}}</p>
 
                                         </div>
 
                                         <div class="Container-Datos-Precio">
 
-                                            <p><strong>${{precioCantidad}}</strong></p>
-                                            <p class="Precio-Mayor-Pago">Cada uno: ${{precio}}</p>
+                                            <p class="PrecioTotal-Pago"><strong>${{precioCantidad}}</strong></p>
+                                            <p class="Precio-Mayor-Pago">Cada uno:${{precio}}</p>
                                             
                                         </div>
 

@@ -7,7 +7,7 @@
 
 }
  
-body{
+body{ 
  
     background-color: #ececec !important; 
     
@@ -85,7 +85,7 @@ body{
 .TheBase{
 
     width: 100%;
-    height: 300px;
+    height: 350px;
     background-color: black;
     margin-top: 30px;
 
@@ -178,6 +178,96 @@ body{
 .texto img{
 
     margin: 0px;
+
+}
+
+.Contenedor-footer{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+
+}
+
+.Contenedor-NombrePaginaFooter{
+
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+
+.t-footer{
+
+    font-size: 40px;
+    margin-left: 0px;
+}
+
+.Contenedor-DatosImportantes{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    height: 277px;
+
+}
+
+.CreadoPor h3{
+
+    color: #007bff;
+
+}
+
+.CreadoPor p{
+    color: white;
+    font-size: 20px;
+    font-weight: 200;
+
+}
+
+.TecnologiasEmpleadas{
+
+    display: flex;
+    flex-direction: column;
+    color: #007bff;
+
+}
+
+.Tecnologias{
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.RedesSociales{
+
+    display: flex;
+    flex-direction: column;
+    color: #007bff;
+
+}
+
+.Redes{
+
+    display: flex;
+    flex-direction: row;
+    
+
+}
+
+.Redes a{
+
+    font-size: 22px;
+    color: white;
+    margin-left: 7px;
 
 }
 
@@ -1045,8 +1135,11 @@ h1{
 .Visualizar-Productos{
 
     /* overflow-y: scroll; */
+    display: flex;
+    flex-direction: column;
     height: 660px;
     width: 50%;
+    /* padding-left: 100px; */
     /* background-color: #ccc; */
 }
 
@@ -1062,7 +1155,7 @@ h1{
 .Container-absolute-Pago{
 
     position: absolute;
-    left: 19%;
+    left: 14%;
     bottom: -6%;
 }
 
@@ -1078,7 +1171,7 @@ h1{
     width: 70%;
     height: 400px;
     overflow-y: scroll;
-    margin-left: 140px;
+    margin-left: 100px;
     margin-top: 20px;
 }
 
@@ -1109,13 +1202,23 @@ h1{
 
     display: flex;
     flex-direction: column;
-    width: 64%;
-    margin-left: 20px;
+    width: 42%;
+    margin-left: 10px;
 }
 .Container-Datos-Producto p{
 
     margin-bottom: 2px;
 
+}
+
+.NombreProducto-Pago{
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    
 }
 
 .Nombre-Producto-Pago{
@@ -1136,7 +1239,7 @@ h1{
     display: flex;
     flex-direction: column;
     width: 33%;
-    margin-right: 10px;
+    /* margin-right: 10px; */
     align-items: end;
 
 }
@@ -1151,6 +1254,7 @@ h1{
 
     opacity: .5;
     margin-bottom: 2px;
+    font-size: 12px;
 }
 
 
@@ -1163,10 +1267,11 @@ h1{
 }
 
 .proceso-pago{
-
+    display: flex;
+    align-items: center;
     width: 50%;
-    height: 1000px;
-    padding: 50px;
+    height: 600px;
+    padding: 20px;
     margin-top: 50px;
     /* background-color: #ccc; */
 
