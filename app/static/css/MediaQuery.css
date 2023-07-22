@@ -22,7 +22,7 @@
     
     .overflow-pago{
 
-        background-color: aqua;
+        /* background-color: aqua; */
         width: 85%;
         margin-left: 70px;
 
@@ -163,7 +163,7 @@
 
     .overflow-pago{
 
-        background-color: aqua;
+        /* background-color: aqua; */
         width: 85%;
         margin-left: 57px;
 
@@ -976,7 +976,7 @@
     .Visualizar-Productos{
 
         width: 80%;
-        height: 534px;
+        height: auto;
 
     }
 
@@ -984,6 +984,12 @@
 
         width: 79%;
         height: 500px;
+
+    }
+
+    .overflow-pago{
+
+        height: auto;
 
     }
 
@@ -1489,6 +1495,14 @@
 
         flex-direction: column;
         height: 450px;
+
+    }
+
+    .Overflow-producto{
+
+        display: flex; 
+        align-items:center; 
+        justify-content:center;
 
     }
 
