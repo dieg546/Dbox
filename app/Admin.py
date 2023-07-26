@@ -6,7 +6,7 @@ import os
 from werkzeug.utils import secure_filename
 from app.db import get_datab
 from app.principal import user_logged, admin_logged
-
+ 
 BlueAdmin = Blueprint('Admin',__name__,url_prefix='/DBox/Administration')
 
 @BlueAdmin.route('/AgregarProducto',methods=['GET','POST'])
@@ -48,3 +48,12 @@ def Agregar():
 
 
     return render_template('/Administration/AgregarProducto.html')
+
+@BlueAdmin.route('/VisualizarProductos/',methods=['GET','POST'])
+@user_logged
+@admin_logged
+def Visualizar_productos():
+
+    return render_template('/Administration/ProductosAdmin.html')
+
+    pass

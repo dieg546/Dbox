@@ -1,28 +1,39 @@
-# import requests
-# from bs4 import BeautifulSoup
-
 from flask import Blueprint, render_template, url_for, redirect, request, flash, g
 
 from app.db import get_datab
 from app.principal import user_logged
-
+ 
  
 Blue1 = Blueprint("DBox", __name__, url_prefix="/DBox")
 
 
-def Total_carrito():
+def Actualizar_CantidadProductos():
 
     db, cur = get_datab()
 
-    cur.execute(  
+    cur.execute(
         "SELECT SUM(cantidad_productos) AS total_carrito FROM carrito "
         "WHERE comprado_por=%s",
-        (g.user_logged["id"],)
+        (g.user_logged['id'],)
     )
 
-    total_carrito = cur.fetchone()
+    Total_productos = cur.fetchone()
 
-    return total_carrito['total_carrito'] if total_carrito['total_carrito']!=None else 0 
+    if Total_productos['total_carrito']!= None:
+
+        cur.execute(
+            "UPDATE usuarios SET productos_carrito=%s WHERE id=%s",
+            (Total_productos['total_carrito'],g.user_logged['id'])
+        )
+
+    else:
+
+        cur.execute(
+            "UPDATE usuarios SET productos_carrito=%s WHERE id=%s",
+            (0,g.user_logged['id'])
+        )
+
+    db.commit()
 
 
 def MisProductos():
@@ -66,9 +77,8 @@ def MisDatos():
 @user_logged
 def main():
     
-    # Total=Total_carrito()
 
-    return render_template("main/indexmain.html",Total=Total_carrito())
+    return render_template("main/indexmain.html")
 
 
 @Blue1.route("/Buscar", methods=["GET", "POST"])
@@ -92,11 +102,7 @@ def buscar():
 
             Diccionario = cur.fetchall()
 
-    # print('PRODUCTO: ', Diccionario)
-
-    
-
-    return render_template("main/buscador.html", Diccionario=Diccionario,Total=Total_carrito())
+    return render_template("main/buscador.html", Diccionario=Diccionario)
 
 
 @Blue1.route("/Buscar/<int:id>", methods=["GET", "POST"])
@@ -108,9 +114,8 @@ def buscar_id(id):
 
     productos = cur.fetchone()
 
-    # print('POR AQUIIII: ',productos)
 
-    return render_template("main/producto.html", productos=productos,Total=Total_carrito())
+    return render_template("main/producto.html", productos=productos)
 
 
 @Blue1.route("/Comprar/<int:id>", methods=["GET", "POST"])
@@ -123,7 +128,6 @@ def Compra(id):
 @user_logged
 def AgregarCarrito(id):
     CantidadSelecta = int(request.form.get("selected"))
-    # print('EOOOOO ',var)
 
     db, cur = get_datab()
 
@@ -154,6 +158,7 @@ def AgregarCarrito(id):
         )
 
         db.commit()
+        Actualizar_CantidadProductos()
         flash("Añadido al carrito.".format(CantidadSelecta))
 
     elif CantidadProducto is not None:
@@ -168,12 +173,10 @@ def AgregarCarrito(id):
                 "WHERE id_producto=%s and comprado_por=%s",
                 (int(CantidadProducto['cantidad_producto'])+CantidadSelecta,id,g.user_logged['id'])
             )
+
             db.commit()
+            Actualizar_CantidadProductos()
             flash("Añadido al carrito {} productos.".format(CantidadSelecta)) 
-
-    # print('PRODUCTO ',CantidadProducto['cantidad_producto']) 
-
-    # print('CARRITOO:',producto['id'])
 
     return redirect(url_for("DBox.buscar_id", id=id))
 
@@ -188,8 +191,7 @@ def carrito():
         "main/carrito.html",
         productosCarrito=ProductosDB,
         Acumulado=AcumuladoPrecio,
-        CantidadProductos=TotalProductos,
-        Total=Total_carrito()
+        CantidadProductos=TotalProductos
     )
 
 
@@ -208,8 +210,11 @@ def Actualizar():
             "WHERE id=%s and comprado_por=%s",
             (int(ListaCantidadProducto[i]), int(productoId), g.user_logged["id"]),
         )
+
         i += 1
+
         db.commit()
+        Actualizar_CantidadProductos()
 
     return redirect(url_for("DBox.carrito"))
 
@@ -224,7 +229,8 @@ def EliminarCarrito(id):
     )
 
     db.commit()
-
+    Actualizar_CantidadProductos()
+    
     return redirect(url_for("DBox.carrito"))
 
 
@@ -278,8 +284,6 @@ def Pago():
                 )
 
                 db.commit()
-
-        # print('chekeo: ',Check)
 
         for producto in ProductosDB:
             cur.execute(

@@ -9,7 +9,7 @@ from app.db import get_datab
 import functools 
  
 Blue0 = Blueprint('InicioDBox', __name__, url_prefix='/InicioDB')
-
+ 
 
 @Blue0.route('/', methods=['GET', 'POST'])
 def principal():
@@ -17,7 +17,7 @@ def principal():
     if g.user_logged is not None: 
         return redirect(url_for('DBox.main'))
 
-    return render_template('principal.html') 
+    return render_template('/InicioUsuario/principal.html') 
 
 
 @Blue0.route('/register', methods=['GET', 'POST'])
@@ -68,7 +68,7 @@ def register():
 
         flash(error)
 
-    return render_template('register.html')
+    return render_template('/InicioUsuario/register.html')
 
 
 @Blue0.route('/login', methods=['GET', 'POST'])
@@ -101,14 +101,14 @@ def login():
 
             session.clear()
             session['user_id'] = user_session['id']
-
+            
             return redirect(url_for('DBox.main'))
             
 
         flash(error)
         
 
-    return render_template('login.html')
+    return render_template('/InicioUsuario/login.html')
 
 
 @Blue0.route('/logout',methods=['GET','POST'])

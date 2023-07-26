@@ -1,24 +1,4 @@
-@media (max-width:1490px) {
-    
-    .relative-indexmain{
-
-        
-        width: 104.9%;
-        
-        
-    }
-
-} 
-
-
 @media (max-width:1360px) {
-
-    /* .relative-indexmain{
-
-        left: 99.0%;
-
-    } */
-
     
     .overflow-pago{
 
@@ -31,17 +11,8 @@
 
 }
 
-
-
 @media (max-width:1250px) {
     
-
-    .relative-indexmain{
-
-        width: 102.5%;
-
-    }
-
     .login-registro h1{
 
         font-size: 32px;
@@ -123,12 +94,6 @@
 }
 
 @media (max-width:1100px){
-
-    .relative-indexmain{
-
-        width: 101.7%;
-
-    }
 
     #buscador{
 
@@ -222,12 +187,6 @@
 
 @media (max-width:1025px) {
 
-    /* .relative-indexmain{
-
-        left: 94.8%;
-
-    } */
-
     .login-registro h1{
 
         font-size: 28px;
@@ -298,12 +257,6 @@
 }
 
 @media (max-width:995px){
-
-    .relative-indexmain{
-
-        width: 100.4%;
-
-    }
 
     .plantillaform{
 
@@ -440,11 +393,6 @@
 
 @media (max-width:895px){
 
-    .relative-indexmain{
-
-        width: 99.0%;
-
-    }
 
     .login-registro h1{
 
@@ -701,12 +649,7 @@
 
 @media (max-width:786px){
 
-    .relative-indexmain{
-
-        width: 97.0%;
-
-    }
-
+    
     .elementoA{
 
         margin-top: 24px;
@@ -916,16 +859,7 @@
 
 }
 
-@media (max-width:682px){
 
-
-    .relative-indexmain{
-
-        width: 95.0%;
-
-    }
-
-}
 @media (max-width:686px){
 
     .elementoA{
@@ -1033,12 +967,7 @@
 
 @media (max-width:625px){
 
-    .relative-indexmain{
-
-        width: 93.5%;
-
-    }
-
+   
 
     .presentacionInicio{
 
@@ -1162,11 +1091,6 @@
 
 @media (max-width:594px) {
     
-    .relative-indexmain{
-
-        width: 92.0%;
-
-    }
 
     #nombre, #apellido,#user,#password{
 
@@ -1259,12 +1183,6 @@
 @media (max-width:550px) {
     
 
-    .relative-indexmain{
-
-        width: 91.0%;
-
-    }
-
     #nombre, #apellido,#user,#password{
 
         width: 155px;
@@ -1312,12 +1230,6 @@
 }
 
 @media (max-width:490px){
-
-    .relative-indexmain{
-
-        width: 92.0%;
-
-    }
 
     .elementobase{
 
@@ -1718,12 +1630,6 @@
 }
 
 @media (max-width:338px){
-
-    .relative-indexmain{
-
-        width: 90.5%;
-
-    }
 
     .login-registro h1{
 
