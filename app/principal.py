@@ -14,7 +14,7 @@ Blue0 = Blueprint('InicioDBox', __name__, url_prefix='/InicioDB')
 @Blue0.route('/', methods=['GET', 'POST'])
 def principal():
  
-    if g.user_logged is not None: 
+    if g.user_logged is not None:
         return redirect(url_for('DBox.main'))
 
     return render_template('/InicioUsuario/principal.html') 
@@ -37,7 +37,7 @@ def register():
 
         error = None
 
-        cur.execute(
+        cur.execute(  
             'SELECT id FROM usuarios WHERE user = %s',
             (user,)
         )
@@ -77,7 +77,7 @@ def login():
     if g.user_logged is not None:
         return redirect(url_for('DBox.main'))
 
-    if request.method == 'POST':
+    if request.method == 'POST': 
 
         user = request.form['user']
         password = request.form['password']
@@ -124,6 +124,8 @@ def logout():
 def exists_user():
 
     user = session.get('user_id')
+
+    # print('User por aqui: ',user)
 
     if user is None:
 

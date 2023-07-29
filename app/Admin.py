@@ -37,16 +37,7 @@ def Agregar():
 
         db.commit()
 
-        # print() 
-
-        # print(NombreProducto)
-        # print(PrecioProducto)     
-        # print(CantidadProducto) 
-        # print(ImagenNombre) 
-
         
-
-
     return render_template('/Administration/AgregarProducto.html')
 
 @BlueAdmin.route('/VisualizarProductos/',methods=['GET','POST'])
@@ -54,6 +45,40 @@ def Agregar():
 @admin_logged
 def Visualizar_productos():
 
-    return render_template('/Administration/ProductosAdmin.html')
+    ProductosAdmin=[]
+
+    if request.method=='POST':
+
+        db, cur= get_datab()
+
+        Buscar = request.form['buscador']
+
+        BuscadorFinal = "%" + Buscar + "%"
+
+        cur.execute(
+            "SELECT imgNombre,producto,precio,cantidad,id FROM productos WHERE producto LIKE %s",
+            (BuscadorFinal,)
+        )
+  
+        ProductosAdmin=cur.fetchall()
+
+        # print(ProductosAdmin)
+
+    return render_template('/Administration/ProductosAdmin.html',ProductosAdmin=ProductosAdmin)
+
+    pass
+
+@BlueAdmin.route('/ModificarProducto/<int:id>',methods=['GET','POST'])
+@user_logged
+@admin_logged
+def ModificarProducto(id):
+
+    db , cur = get_datab()
+
+    cur.execute(
+        "SELECT imgNombre,producto,"
+    )
+
+    return render_template('Administration/ModificarProducto.html')
 
     pass

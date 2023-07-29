@@ -4,7 +4,7 @@ var SelectorPadre = document.getElementsByClassName('Selector')
 // console.log('Padre? ',SelectorPadre)
 var Suma = 0
 var lista = []
-var lista_Aux = []
+var lista_Aux = [] 
 
 // console.log('HEY ',SelectorPadre)
 
@@ -328,8 +328,6 @@ function ValidacionUsuarioTarjeta() {
  
 }
 
-// var FormPago = document.getElementById('Form-Pago')
-
 
 
 // ------------------------------------Nombre de imagen -------------------------------
@@ -372,25 +370,41 @@ if (Imagen!=null){
     Cantidad.addEventListener('focusout', CantidadValida)
 
     Imagen.addEventListener('change',function(event){
-        // console.log('EPA')
+        console.log('EPA')
         // console.log(event.files[0].name)
 
-        var files = event.target.files;
+        var files = event.target.files[0];
+
+        console.log('something here: ',files)
 
         console.log(files.length)
 
         if (files.length==0){
 
+            console.log('Nadita')
+
             ImagenValida()
 
         }else{
+
+            valor=document.getElementById('textoImagen').innerHTML=files.name 
+            document.getElementById('textoImagen').innerHTML=files.name
+            document.getElementById('Contenedor-ImagenPre').style.display='block'
+            document.getElementById('Contenedor-AgregarProductoId').style.height='790px'
             
-            valor=document.getElementById('textoImagen').innerHTML=files[0].name 
-            document.getElementById('textoImagen').innerHTML=files[0].name
+            var imagenPre = document.getElementById('ImagenPre')
+
+            var ImagenUrl = new FileReader();
+
+            ImagenUrl.onload = function(e){
+
+                imagenPre.src = e.target.result;
+
+            }
+            ImagenUrl.readAsDataURL(files)
+
             console.log('EL VALOR ',valor) 
             document.getElementById('ImagenTexto-AgregarProducto').value=valor
-            console.log(document.getElementById('ImagenTexto-AgregarProducto').innerHTML)
-            // console.log(document.getElementById('textoImagen').innerHTML)
             ImagenValida()
         }
 

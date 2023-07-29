@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
     <link rel="stylesheet" href="{{url_for('static',filename='css/MediaQuery.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/Admin.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400&family=Public+Sans:wght@500&display=swap" rel="stylesheet">
@@ -38,7 +39,23 @@
                 
                 {%if g.user_logged['id']==1%}
 
-                    <a href="{{url_for('Admin.Agregar')}}" class="enlaceBase" title="Admin"><i class="fa-solid fa-users-gear" style="font-size: 25px;"></i></a>
+                    <div class="MenuAdmin">
+                        <div class="Menu">
+                            <i class="fa-solid fa-users-gear" style="font-size: 25px;"></i>
+                        </div>
+
+                        <ul class="Submenu-Admin">
+                            <li>
+                                <a href="{{url_for('Admin.Agregar')}}">Agregar Producto</a>
+                            </li>
+                            <li>
+                                <a href="{{url_for('Admin.Visualizar_productos')}}">Visualizar Productos</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <!-- <a href="" class="enlaceBase" title="Admin"><i class="fa-solid fa-users-gear" style="font-size: 25px;"></i></a> -->
 
                 {%endif%}
 

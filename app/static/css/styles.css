@@ -6,11 +6,11 @@
     /* font-family: 'Public Sans', sans-serif; */
 
 }
- 
-body{ 
- 
-    background-color: #ececec !important; 
-    
+
+body{
+
+    background-color: #ececec !important;
+
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -49,7 +49,7 @@ body{
     margin-left: 30px;
     color: white;
     text-align: left;
-    
+
 }
 
 .elementobase{
@@ -58,13 +58,13 @@ body{
     flex-direction: row;
     align-items: center;
     margin-right: 30px;
-    
+
 }
 
 .Carrito-Productos{
 
     position: relative;
-    display: flex;  
+    display: flex;
     align-items: center;
     justify-content: center;
 
@@ -82,6 +82,56 @@ body{
     left: 94%;
     height: 20px;
     line-height: 20px;
+
+}
+
+.MenuAdmin{
+
+    position: relative;
+    height: 73px;
+    line-height: 73px;
+}
+
+.Submenu-Admin{
+
+    position: absolute;
+    list-style: none;
+    display: none;
+    background-color: white;
+    border: 1px solid black;
+    width: 150px;
+    right: 0%;
+    height: 100px;
+    /* top: 202%; */
+
+}
+
+.Submenu-Admin li{
+
+    border-bottom: 1px solid black;
+    height: 50px;
+    line-height: 30px
+
+}
+
+.MenuAdmin ul li a{
+
+    display: block;
+    padding: 9px;
+    width: 100%;
+    font-size: 14px;
+
+}
+
+.MenuAdmin:hover{
+
+    color: #007bff;
+
+}
+
+.MenuAdmin:hover .Submenu-Admin{
+
+    display: block;
 
 }
 
@@ -131,7 +181,7 @@ body{
     height: 500px;
     margin-top: 130px;
     margin-left: 11%;
-    
+
 }
 
 .login-registro{
@@ -284,7 +334,7 @@ body{
 
     display: flex;
     flex-direction: row;
-    
+
 
 }
 
@@ -410,7 +460,7 @@ h1{
 
     margin-top: 20px;
     font-size: 16px;
-    
+
 
 }
 
@@ -437,7 +487,7 @@ h1{
     background-color: #0145F9;
     color: white;
     transition: all .3s;
-    
+
 }
 
 .botonlogin:hover{
@@ -577,39 +627,15 @@ h1{
 }
 
 .boton-login{
-    
+
     margin-top: 0px;
     width: 200px;
-    
+
 }
 
 
 /* -------------------------indexmain.html-------------------------- */
 
-
-/* .relative-indexmain{
-
-    position: relative;
-    display: flex;
-    justify-content: end;
-    height: 50px;
-    width: 105.5%;
-}
-
-.absoluto-indexmain{
-
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    color: white;
-    border-radius: 100px;
-    line-height: 20px;
-    font-weight: bold;
-    text-align: center;
-    background-color: #007bff;
-    top: -124%;
-
-} */
 
 
 /* ----------------------buscador.html------------------------ */
@@ -701,7 +727,7 @@ h1{
     margin-top: 29px;
     padding: 20px;
     margin-right: 20px;
-    
+
     align-items: center;
     justify-content: center;
     border-radius: 6px;
@@ -727,7 +753,7 @@ h1{
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    
+
 }
 
 .enlaceProducto{
@@ -862,7 +888,7 @@ h1{
     align-items: baseline;
     margin-left: 25px;
     width: 60%;
-    
+
 }
 
 .Overflow-carrito{
@@ -872,7 +898,7 @@ h1{
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    
+
 }
 
 .especificacionesCarrito h5{
@@ -1000,7 +1026,7 @@ h1{
     width: 90%;
     height: 450px;
     border-radius: 2px;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, .4);  
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, .4);
     align-items: center;
     justify-content: center;
 }
@@ -1034,7 +1060,7 @@ h1{
 
     display: flex;
     flex-direction: column;
-    width: 100%; 
+    width: 100%;
     padding: 10px;
     border-radius: 5px;
     left: 47%;
@@ -1085,7 +1111,7 @@ h1{
     text-align: center;
     line-height: 50px;
     margin-right: 10px;
-}   
+}
 
 .añadir{
 
@@ -1219,7 +1245,7 @@ h1{
     flex-direction: row;
     margin-top: 20px;
     align-items: center;
-    
+
 }
 
 .Container-Datos-Producto{
@@ -1242,7 +1268,7 @@ h1{
     width: 100%;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    
+
 }
 
 .Nombre-Producto-Pago{
@@ -1287,7 +1313,7 @@ h1{
     width: 50%;
     height: 1000px;
     /* background-color: red; */
-    
+
 }
 
 .proceso-pago{
@@ -1428,7 +1454,7 @@ input[type="checkbox"]{
     width: 100%;
     display: flex;
     flex-direction: column;
-    height: 850px;
+    height: 735px;
     align-items: center;
     justify-content: center;
 

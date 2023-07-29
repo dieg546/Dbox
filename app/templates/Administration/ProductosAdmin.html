@@ -4,12 +4,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>{%block title%}Visualizar Productos Admin{%endblock%}</title>
 </head>
 <body>
     {%block content%}
 
         <div class="content">
+
+            <div class="VisualizadorProductos">
+
+                <h1>Visualizador de productos.</h1>
+
+                <form action="" method="post" class="Form-buscador">
+
+                    <input type="text" name="buscador" id="buscador" placeholder="Escribe el producto que deseas Visualizar">
+    
+                    <button type="submit" class="botonBuscador"><i class="fa-solid fa-magnifying-glass"></i></button>
+     
+                </form>
+
+
+                <div class="ProductosAdmin">
+
+                    {%for productoAdmin in ProductosAdmin%}
+
+ 
+                        {%set NombreProducto=productoAdmin['producto']%}                        
+                        {%set PrecioProducto=productoAdmin['precio']%}                        
+                        {%set Cantidad=productoAdmin['cantidad']%}
+                        {%set IdProducto=productoAdmin['id']%}                                                
+
+                        <div class="ResultadoBusqueda">
+
+                            {%for key, value in productoAdmin.items()%}
+
+                                {%if loop.index==1%}
+
+                                    <img src="/static/imagenes/imagenesProductos/{{value}}.jpg" alt="" width="200" height="200">
+
+                                {%endif%}
+
+
+                                {%if loop.last%}
+
+                                    <div class="ContainerDatosProductos">
+
+                                        <div class="DataProducto">
+
+                                            <p><strong>Nombre del producto:</strong> <span>{{NombreProducto}}</span></p>
+                                            
+
+                                        </div>
+
+                                        <div class="DataProducto">
+                                            <p><strong>Precio del producto:</strong> USD$<span>{{PrecioProducto}}</span></p>
+                                            
+
+                                        </div>
+
+                                        <div class="DataProducto">
+                                            
+                                            <p><strong>Productos disponibles:</strong> <span>{{Cantidad}}</span></p>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="Modificar-EliminarProducto">
+
+                                        <a href="{{url_for('Admin.ModificarProducto',id=IdProducto)}}" class="BotonEnlace-Admin">Producto</a>
+                                        <!-- <button>Eliminar</button> -->
+
+                                        <!-- <p>{{IdProducto}}</p> -->
+
+                                    </div>
+
+                                {%endif%}
+
+                            {%endfor%}
+
+                        </div>
+
+                        <!-- {{productoAdmin['precio']}} -->
+
+                    {%endfor%}
+                    
+
+                    
+
+
+                </div>
+
+            </div>
 
         </div>
 

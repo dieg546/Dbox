@@ -8,7 +8,7 @@ Blue1 = Blueprint("DBox", __name__, url_prefix="/DBox")
 
 
 def Actualizar_CantidadProductos():
-
+ 
     db, cur = get_datab()
 
     cur.execute(
@@ -83,7 +83,7 @@ def main():
 
 @Blue1.route("/Buscar", methods=["GET", "POST"])
 @user_logged
-def buscar():
+def buscar(): 
     Diccionario = {}
     if request.method == "POST":
         Producto = request.form["buscador"]
