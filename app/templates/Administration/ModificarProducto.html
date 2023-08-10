@@ -1,20 +1,82 @@
 <!DOCTYPE html>
 {%extends 'base.html'%}
-<html lang="en">
+<html lang="en"> 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{%block title%}Modificar Producto{%endblock%}</title>
 </head>
+
 <body>
-    
+
     {%block content%}
 
         <div class="content">
-            <h1>You can, Diego, you can.</h1>
+
+            <div class="flex-ModificarProducto">
+
+                <h1>Modificar producto.</h1>
+
+                <div class="contenedor-ModificarProducto">
+
+                    <div class="Datos-ModificarProducto">
+
+                        <form action="" method="post" class="form-ModificarProducto" id="Form-ModificarProducto">
+
+                            <div class="input-ModificarProducto">
+                                <label for="" class="Label-modificarProducto">Nombre Producto</label>
+                                <input type="text" name="NombreModificado" id="input-NombreProducto" value="{{ProductoElegido['producto']}}">
+                            </div>
+
+                            <div class="input-ModificarProducto">
+                                <label for="" class="Label-modificarProducto">Precio Producto</label>
+                                <input type="text" name="PrecioModificado" id="input-PrecioProducto" value="{{ProductoElegido['precio']}}" maxlength="8" onkeypress="IsNumber(event);">
+                            </div>
+
+                            <div class="input-ModificarProducto">
+                                <label for="" class="Label-modificarProducto">Cantidad Producto</label>
+                                <input type="text" name="CantidadModificado" id="input-CantidadProducto" value="{{ProductoElegido['cantidad']}}" maxlength="2" onkeypress="IsNumber(event);">
+                            </div>
+
+                            <div class="input-ModificarProducto Imagen-modificada">
+                                <label for="ImagenModificada" class="Label-ImagenModificada">Imagen Producto</label>
+                                <div class="TextoImagen-Modificada" id="TextoImg-Modificada">{{ProductoElegido['imgNombre']}}.jpg</div>
+                            </div>
+
+                            <input type="file" name="ImagenModificada" id="ImagenModificada">
+
+                            <div class="ImagenPrev-Modificada">
+
+                                <div id="ContenedorImagenPrev">
+
+                                    <img src="/static/imagenes/imagenesProductos/{{ProductoElegido['imgNombre']}}.jpg" alt="" width="150" height="150" id="ImagenPre-Modificada">
+
+                                </div>
+
+                            </div>
+
+                            <div class="Botones-ModificarProducto">
+
+                                <button>Eliminar</button>
+                                <button type="button" id="Boton-ModificarProducto">Modificar</button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
+
+        <script src="{{url_for('static',filename='js/ModificarProducto.js')}}"></script>
 
     {%endblock%}
 
 </body>
+
 </html>

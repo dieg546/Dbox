@@ -80,7 +80,7 @@ def main():
 
     return render_template("main/indexmain.html")
 
-
+ 
 @Blue1.route("/Buscar", methods=["GET", "POST"])
 @user_logged
 def buscar(): 

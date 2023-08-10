@@ -23,7 +23,7 @@ instruccions=[
         
             id INT PRIMARY KEY AUTO_INCREMENT,
             producto VARCHAR(200) NOT NULL,
-            precio DECIMAL(6,2) NOT NULL,
+            precio DECIMAL(6,2) NOT NULL, 
             cantidad INT NOT NULL,
             imgNombre varchar(200) NOT NULL
 

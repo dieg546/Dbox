@@ -5,7 +5,7 @@ from flask import(
 import os
 from werkzeug.utils import secure_filename
 from app.db import get_datab
-from app.principal import user_logged, admin_logged
+from app.principal import user_logged, admin_logged 
  
 BlueAdmin = Blueprint('Admin',__name__,url_prefix='/DBox/Administration')
 
@@ -14,7 +14,7 @@ BlueAdmin = Blueprint('Admin',__name__,url_prefix='/DBox/Administration')
 @admin_logged
 def Agregar():
     
-    if request.method =='POST':
+    if request.method =='POST': 
 
         db , cur =get_datab()
 
@@ -75,10 +75,28 @@ def ModificarProducto(id):
 
     db , cur = get_datab()
 
+
     cur.execute(
-        "SELECT imgNombre,producto,"
+        "SELECT imgNombre,producto,precio,cantidad,id FROM productos "
+        "WHERE id = %s",
+        (id,)
     )
 
-    return render_template('Administration/ModificarProducto.html')
+    ProductoElegido=cur.fetchone() 
+
+    if request.method=='POST':
+
+        NombreModificado = request.form['NombreModificado']
+        PrecioModificado = request.form['PrecioModificado']
+        CantidadModificada = request.form['CantidadModificado']
+
+
+
+        print(NombreModificado," ",PrecioModificado," ",CantidadModificada)
+
+        return redirect(url_for('DBox.main')) 
+ 
+
+    return render_template('Administration/ModificarProducto.html',ProductoElegido=ProductoElegido)
 
     pass

@@ -5,8 +5,8 @@ var SelectorPadre = document.getElementsByClassName('Selector')
 var Suma = 0
 var lista = []
 var lista_Aux = [] 
-
-// console.log('HEY ',SelectorPadre)
+ 
+// console.log('HEY ',SelectorPadre) 
 
 for (var i = 0; i < SelectorPadre.length; i++) {
 
@@ -408,12 +408,6 @@ if (Imagen!=null){
             ImagenValida()
         }
 
-        // document.getElementById('textoImagen').innerHTML=files[0].name
-
-        
-
-        // console.log(files[0].name)
-
     })
 
     BotonProducto.addEventListener('click',function(event){
@@ -451,12 +445,6 @@ function NombreValido(){
     }
 
 }
-
-// function PrecioValidAdmin(){
-
-//     console.log(PrecioProductoAdmin.value.replace(/^(0+)/g, ''))
-
-// }
 
 function PrecioAdmin(){
 
@@ -533,6 +521,9 @@ function ImagenValida(){
 
 
 }
+
+
+
 // ------------------------Opcion para resetear Página------------------------------
 
 

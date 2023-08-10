@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
 
-}
+} 
 
 .ResultadoBusqueda{
 
@@ -22,7 +22,6 @@
 }
 
 .ContainerDatosProductos{
-
 
     display: flex;
     flex-direction: column;
@@ -77,9 +76,131 @@
 #Contenedor-ImagenPre{
 
     display: none;
-    width: 20%;
+    width: 28%;
     height: 150px;
     margin-bottom: 15px;
     /* background-color: red; */
+
+}
+
+.flex-ModificarProducto{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    width: 80%;
+    margin-left: 10%;
+
+}
+
+.contenedor-ModificarProducto{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%; 
+    height: 650px;
+    background-color: white;
+    /* border: 1px solid black; */
+    border-radius: 6px;
+    box-shadow: 0px 0px 5px;
+
+}
+
+.Datos-ModificarProducto{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 500px;
+
+}
+
+.form-ModificarProducto{
+
+    width: 100%;
+    height: auto;
+
+}
+
+.input-ModificarProducto{
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+}
+
+.Label-modificarProducto{
+
+    font-weight: bolder;
+
+}
+
+.input-ModificarProducto input[type="text"]{
+
+    margin-bottom: 15px;
+    border-radius: 6px;
+    padding: 10px;
+    border: 1px solid #918e8e;
+
+}
+
+.input-ModificarProducto input[type="text"]:focus{
+
+    outline-color: #007bff;
+
+}
+
+.Imagen-modificada{
+
+    flex-direction: row;
+
+}
+
+.Label-ImagenModificada{
+
+   background-color: #007bff;
+   cursor: pointer;
+   border-radius: 6px 0px 0px 6px;
+   width: 165px;
+   text-align: center;
+   color: white;
+   height: 40px;
+   line-height: 40px;
+
+}
+
+.TextoImagen-Modificada{
+
+    width: 80%;
+    height: 40px;
+    background-color: rgb(165, 161, 161);
+    border-radius: 0px 6px 6px 0px;
+    padding: 10px;
+    color: white;
+
+}
+
+.ImagenPrev-Modificada{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin-bottom: 20px;
+
+}
+
+.Botones-ModificarProducto{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 
 }
