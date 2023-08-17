@@ -9,11 +9,21 @@ from app.principal import user_logged, admin_logged
  
 BlueAdmin = Blueprint('Admin',__name__,url_prefix='/DBox/Administration')
 
+def ActualizarImagen(imagen):
+
+    CarpetaBase = os.path.dirname(__file__)
+    Archivo = secure_filename(imagen.filename)  
+    # print('HEEEEEEY: ',Archivo) 
+    Subir = os.path.join(CarpetaBase,'static/imagenes/imagenesProductos',Archivo)
+    imagen.save(Subir)
+    
+    return Archivo.replace('.jpg','')
+
 @BlueAdmin.route('/AgregarProducto',methods=['GET','POST'])
 @user_logged
 @admin_logged
 def Agregar():
-    
+     
     if request.method =='POST': 
 
         db , cur =get_datab()
@@ -23,16 +33,10 @@ def Agregar():
         CantidadProducto = request.form['CantidadProducto']
         ImagenNombre = request.files['archivo']
  
-        CarpetaBase = os.path.dirname(__file__)
-        Archivo = secure_filename(ImagenNombre.filename)  
-        # print('HEEEEEEY: ',Archivo) 
-        Subir = os.path.join(CarpetaBase,'static/imagenes/imagenesProductos',Archivo)
-        ImagenNombre.save(Subir)
-
         cur.execute(
             "INSERT INTO productos(producto,precio,cantidad,imgNombre) "
             "VALUES(%s,%s,%s,%s)",
-            (NombreProducto,PrecioProducto,CantidadProducto,Archivo.replace('.jpg',''))
+            (NombreProducto,PrecioProducto,CantidadProducto,ActualizarImagen(ImagenNombre))
         )
 
         db.commit()
@@ -62,11 +66,11 @@ def Visualizar_productos():
   
         ProductosAdmin=cur.fetchall()
 
-        # print(ProductosAdmin)
+     
 
     return render_template('/Administration/ProductosAdmin.html',ProductosAdmin=ProductosAdmin)
 
-    pass
+    
 
 @BlueAdmin.route('/ModificarProducto/<int:id>',methods=['GET','POST'])
 @user_logged
@@ -74,7 +78,6 @@ def Visualizar_productos():
 def ModificarProducto(id):
 
     db , cur = get_datab()
-
 
     cur.execute(
         "SELECT imgNombre,producto,precio,cantidad,id FROM productos "
@@ -89,14 +92,17 @@ def ModificarProducto(id):
         NombreModificado = request.form['NombreModificado']
         PrecioModificado = request.form['PrecioModificado']
         CantidadModificada = request.form['CantidadModificado']
+        ImagenModificada = request.files['ImagenModificada']
 
+        cur.execute(
+            "UPDATE productos SET producto=%s,precio=%s,cantidad=%s,imgNombre=%s "
+            "WHERE id=%s",
+            (NombreModificado,PrecioModificado,CantidadModificada,ActualizarImagen(ImagenModificada),id)
+        )
 
-
-        print(NombreModificado," ",PrecioModificado," ",CantidadModificada)
+        db.commit()
 
         return redirect(url_for('DBox.main')) 
  
 
     return render_template('Administration/ModificarProducto.html',ProductoElegido=ProductoElegido)
-
-    pass

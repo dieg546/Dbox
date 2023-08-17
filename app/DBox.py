@@ -19,7 +19,7 @@ def Actualizar_CantidadProductos():
 
     Total_productos = cur.fetchone()
 
-    if Total_productos['total_carrito']!= None:
+    if Total_productos['total_carrito'] != None: 
 
         cur.execute(
             "UPDATE usuarios SET productos_carrito=%s WHERE id=%s",
@@ -45,7 +45,7 @@ def MisProductos():
         "SELECT carrito.id,id_producto,producto_imagen,nombre_producto,precio_producto,cantidad,cantidad_productos from carrito"
         " INNER JOIN productos ON carrito.id_producto=productos.id"
         " where comprado_por=%s",
-        (g.user_logged["id"],),
+        (g.user_logged["id"],)
     )
 
     productosCarrito = cur.fetchall()
@@ -264,7 +264,7 @@ def Pago():
                     "INSERT INTO transaccion(email_transaccion,numero_tarjeta,fecha_vencimiento,numero_reverso,usuario_tarjeta,cheack,transaccion_hecha_por) "
                     "VALUES(%s,%s,%s,%s,%s,%s,%s)",
                     (
-                        Email,
+                        Email, 
                         NumeroTarjeta,
                         Caducidad,
                         Reverso,

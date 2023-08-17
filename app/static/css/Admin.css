@@ -204,3 +204,24 @@
 
 
 }
+
+.Botones-Modificar{
+
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 100px;
+    height: 40px;
+    background-color: red;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    color: white;
+
+}
+
+.modify{
+
+    background-color: rgb(240, 177, 43);
+    color: black;
+    font-weight: 600;
+
+}

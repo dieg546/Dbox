@@ -22,7 +22,7 @@
 
                     <div class="Datos-ModificarProducto">
 
-                        <form action="" method="post" class="form-ModificarProducto" id="Form-ModificarProducto">
+                        <form action="" method="post" class="form-ModificarProducto" id="Form-ModificarProducto" enctype="multipart/form-data">
 
                             <div class="input-ModificarProducto">
                                 <label for="" class="Label-modificarProducto">Nombre Producto</label>
@@ -47,7 +47,7 @@
                             <input type="file" name="ImagenModificada" id="ImagenModificada">
 
                             <div class="ImagenPrev-Modificada">
-
+ 
                                 <div id="ContenedorImagenPrev">
 
                                     <img src="/static/imagenes/imagenesProductos/{{ProductoElegido['imgNombre']}}.jpg" alt="" width="150" height="150" id="ImagenPre-Modificada">
@@ -58,8 +58,8 @@
 
                             <div class="Botones-ModificarProducto">
 
-                                <button>Eliminar</button>
-                                <button type="button" id="Boton-ModificarProducto">Modificar</button>
+                                <button class="Botones-Modificar">Eliminar</button>
+                                <button type="button" class="Botones-Modificar modify" id="Boton-ModificarProducto">Modificar</button>
 
                             </div>
 

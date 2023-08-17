@@ -10,7 +10,6 @@ import functools
  
 Blue0 = Blueprint('InicioDBox', __name__, url_prefix='/InicioDB')
  
-
 @Blue0.route('/', methods=['GET', 'POST'])
 def principal():
  
@@ -115,7 +114,6 @@ def login():
 def logout():
     
     session.clear()
-    # print('POR AQUI' ,g.user_logged)
     g.user_logged=None
     return redirect(url_for('InicioDBox.principal'))
 
@@ -124,8 +122,6 @@ def logout():
 def exists_user():
 
     user = session.get('user_id')
-
-    # print('User por aqui: ',user)
 
     if user is None:
 

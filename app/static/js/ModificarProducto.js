@@ -87,6 +87,12 @@ EnviarCambios.addEventListener('click',function(e){
 
         FormModificar.submit()
 
+    }else{
+        
+        ValidarTexto() 
+        ValidarPrecio() 
+        ValidarCantidad()
+
     }
 
 })
